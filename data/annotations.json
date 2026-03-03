@@ -1,0 +1,3843 @@
+[
+  {
+    "sample_id": "S0001",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert cal_sum(-5) == 5.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0002",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'even_bit_set_number' changed (sim=0.52). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0003",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.32). Dominant error: TypeError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0004",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.95). Dominant error: NameError (3/3 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0005",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.64). Dominant error: IndexError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0006",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError/ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert convert_list_dictionary(['S001', 'S002', 'S003', 'S00.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0007",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [# Check if arr is not empty | if len(arr) == 0: | raise ValueError(\"arr must]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0008",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "LLM output contains reasoning/explanation text instead of executable code. No function or class definition found — generation collapsed to natural language.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0009",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 1/1 valid test inputs. Tests expect return values but get exceptions. E.g.: assert is_sorted([]) == True.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0010",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM output has syntax errors (possibly truncated).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0011",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0012",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code nearly identical but optimization changed edge-case behavior. Subtle semantic collision.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0013",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0014",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.89). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0015",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 1/1 valid test inputs. Tests expect return values but get exceptions. E.g.: assert first_Digit(0) == 0.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0016",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0017",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Parameter 'dict' shadows builtin type, causing isinstance() to fail with TypeError.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0018",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'text_lowercase_underscore' changed (sim=0.70). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0019",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [converted_list.append(element) |  | But this]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0020",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.78). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0021",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0022",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0023",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0024",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM output has syntax errors (possibly truncated).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0025",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0026",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.30). Dominant error: TypeError (8/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0027",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'similar_elements' modified during optimization (similarity=0.74). New optimized logic produces different results for edge cases.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0028",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Moderate changes (sim=0.88) caused test failures. New logic conflicts with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0029",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0030",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0031",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.81). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0032",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0033",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0034",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'add_tuple' modified during optimization (similarity=0.70). New optimized logic produces different results for edge cases.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0035",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.82). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0036",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.77). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0037",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.85). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0038",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0039",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1",
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 2/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert newman_prime(0) == 1. Timeout/RecursionError — new code introduces performance regression or infinite recursion.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0040",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0041",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert find_Odd_Pair([], 0) == 0.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0042",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.69). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0043",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'find_adverb_position' changed (sim=0.79). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0044",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == .",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0045",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0046",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 3/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert add_dict_to_tuple((1, 'abc', [1, 2, 3]), {'key': 'val.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0047",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [Perhaps the correct interpretation is that the function should accept both regular strings and numer]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0048",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [except Exception: | results.append(None) | return results]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0049",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0050",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.61). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0051",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'combinations_list' changed (sim=0.61). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0052",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'casefold'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0053",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'string_to_list' changed (sim=0.51). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0054",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0055",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.30). Dominant error: AssertionError (8/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0056",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'surface_Area' changed (sim=0.59). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0057",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [s = m + 1 = 2 | n = 1, power_of_2 = 2 | current = 1 * 2 = 2 == s, so return True.].",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0058",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM output has syntax errors (possibly truncated).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0059",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'clear_cache' changed (sim=0.57). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0060",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0061",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0062",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Moderate changes (sim=0.53) caused test failures. New logic conflicts with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0063",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0064",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'drop_empty' changed (sim=0.71). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0065",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0066",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [self._cache = {} | self.stats = { | 'calls]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0067",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Code very similar to prev but some constraint was lost. Subtle context loss in minor modification.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0068",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0069",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0070",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.68). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0071",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 1/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert difference(0) == 0.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0072",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 1/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert find_char_long('') == [].",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0073",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0074",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert left_insertion([], [24]) == 0.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0075",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert min_val(['Python', 3, 2, 4, 5, 'version'])==2.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0076",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0077",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 2/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert parabola_directrix(0, 0, 0) == 0.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0078",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.88). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0079",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [Given the time, I'll proceed with the initial code where the function attempts to convert the string]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0080",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.70). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0081",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'mean_absolute_deviation' changed (sim=0.76). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0082",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Entire functions/methods removed: {'__init__'}. Tests reference these missing symbols.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0083",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0084",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.88). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0085",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [But what about the case where the argument is a string with parts that are valid letters or numbers,]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0086",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code nearly identical but optimization changed edge-case behavior. Subtle semantic collision.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0087",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Moderate changes (sim=0.78) caused test failures. New logic conflicts with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0088",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'count_Substrings' changed (sim=0.75). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0089",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0090",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0091",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code nearly identical but optimization changed edge-case behavior. Subtle semantic collision.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0092",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [for tup1, tup2 in zip(t1, t2): | if len(tup1) != len(tup2): | raise ValueError(\"Corresponding]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0093",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function '__init__' was extensively rewritten (similarity=0.20). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0094",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0095",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert check_element([], 'red') == True.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0096",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0097",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.75). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0098",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert median_trapezium(0, 0, 0) == 0.0.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0099",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0100",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code nearly identical but optimization changed edge-case behavior. Subtle semantic collision.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0101",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [ | def string_to_md5_batch(self, args_list): | # ... (rest of the method remains the same)].",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0102",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.82). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0103",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [But the original test case expects a tuple of integers, which would cause the assert to fail. |  | S]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0104",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0105",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.94). Dominant error: AssertionError (3/3 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0106",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert check_dict_case({'p': 'pineapple', 'b': 'banana'}) ==.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0107",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.82). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0108",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert find_substring([], 'abc') == False.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0109",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0110",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function '__init__' was extensively rewritten (similarity=0.29). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0111",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.82). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0112",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 8/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert number_ctr('program2bedone') == 1.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0113",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0114",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.71). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0115",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 6/6 valid test inputs. Tests expect return values but get exceptions. E.g.: assert is_sublist([False, 99.97028427774339, 82, 'GYVu', Fal.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0116",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0117",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0118",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0119",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0120",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0121",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0122",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "LLM output contains reasoning/explanation text instead of executable code. No function or class definition found — generation collapsed to natural language.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0123",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0124",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0125",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function '__init__' was extensively rewritten (similarity=0.18). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0126",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function '__init__' was extensively rewritten (similarity=0.27). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0127",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0128",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert insert_element([-94.19039842971628, -3.40313806848664.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0129",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.27). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0130",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0131",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'parabola_directrix' changed (sim=0.33). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0132",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.87). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0133",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'jacobsthal_num' changed (sim=0.66). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0134",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert subject_marks([('Physics', -76), ('Biology', -45), ('.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0135",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.90). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0136",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0137",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0138",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError/ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert sort_sublists([['green', 'orange'], ['black', 'white'.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0139",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0140",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'snake_to_camel' changed (sim=0.61). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0141",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0142",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function '__init__' was extensively rewritten (similarity=0.30). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0143",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0144",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0145",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.96). Dominant error: AssertionError (2/2 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0146",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert expensive_items([], 5) == [].",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0147",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0148",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0149",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'clear_cache' changed (sim=0.67). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0150",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Code very similar to prev but some constraint was lost. Subtle context loss in minor modification.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0151",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0152",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0153",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0154",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "LLM output contains reasoning/explanation text instead of executable code. No function or class definition found — generation collapsed to natural language.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0155",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert sort_counter({'A': -10, 'B': 20, 'C': -5, 'D': 15, 'E.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0156",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [But the user wants the complete code. So putting it all together. |  | But also, need to make sure t]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0157",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.95). Dominant error: AssertionError (3/3 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0158",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0159",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function '__init__' was extensively rewritten (similarity=0.18). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0160",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0161",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0162",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 1/1 valid test inputs. Tests expect return values but get exceptions. E.g.: assert skjkasdkd([0, 0, -1, 2, 5, 7, 11, 13, 17]) == 8.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0163",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0164",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert intersection([1, 2], [2, 3]) == 'NO'.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0165",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "LLM output contains reasoning/explanation text instead of executable code. No function or class definition found — generation collapsed to natural language.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0166",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0167",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError from newly added validation that rejects valid inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0168",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0169",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function '__init__' changed (sim=0.35). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0170",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [histogram('a b c') == {'a': 1, 'b': 1, 'c': 1} | histogram('a b b a') == {'a': 2, 'b': 2} | histogra]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0171",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 1/1 valid test inputs. Tests expect return values but get exceptions. E.g.: assert square_perimeter(True) == 4.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0172",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0173",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'logger'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0174",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Moderate changes (sim=0.82) caused test failures. New logic conflicts with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0175",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0176",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0177",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function '__init__' changed (sim=0.60). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0178",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.11). Dominant error: AssertionError (8/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0179",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function '__init__' changed (sim=0.37). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0180",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0181",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert sum_even_and_even_index([5, 6, 12, 1, 18, 8]) == 30.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0182",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'is_lower' modified during optimization (similarity=0.69). New optimized logic produces different results for edge cases.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0183",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0184",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0185",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 3/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert polar_rect(-1, 0) == ((1.0, 3.141592653589793), (-2+2.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0186",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'heap_sort' changed (sim=0.64). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0187",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function '__init__' was extensively rewritten (similarity=0.18). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0188",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.85). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0189",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0190",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 9/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert change_date_format('2021-1-026') == '02-1-20216'.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0191",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 2/2 valid test inputs. Tests expect return values but get exceptions. E.g.: assert sum_list(['a', 'b', 'c'], ['d', 'e', 'f']) == ['ad', .",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0192",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0193",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \".",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0194",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function '__init__' changed (sim=0.47). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0195",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0196",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert is_Even(-10) == True.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0197",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0198",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [Yes, this would log the TypeError as a WARNING. But according to the original code, the type check w]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0199",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0200",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert remove_all_spaces('python  program')==('pythonprogram.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0201",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Major code rewrite (sim=0.11) with test failures. Prior behavior likely lost.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0202",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.85). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0203",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Moderate changes (sim=0.76) caused test failures. New logic conflicts with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0204",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [But this would change the function's behavior for non-numeric strings. |  | Alternatively, perhaps]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0205",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'dog_age' modified during optimization (similarity=0.75). New optimized logic produces different results for edge cases.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0206",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 5/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert encode('This is a message') == 'tHKS KS C MGSSCGG'.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0207",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert last_Digit_Factorial(2.5) == 0.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0208",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 1/1 valid test inputs. Tests expect return values but get exceptions. E.g.: assert cube_Sum(False) == 0.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0209",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Major code rewrite (sim=0.01) with test failures. Prior behavior likely lost.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0210",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0211",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'similar_elements' changed (sim=0.53). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0212",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Moderate changes (sim=0.90) caused test failures. New logic conflicts with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0213",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0214",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM output has syntax errors (possibly truncated).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0215",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'change_date_format' changed (sim=0.79). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0216",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [So, the function should: |  | - If `K` is]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0217",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Moderate changes (sim=0.91) caused test failures. New logic conflicts with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0218",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'clear_cache' changed (sim=0.60). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0219",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.48). Dominant error: AssertionError (7/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0220",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0221",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0222",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM output has syntax errors (possibly truncated).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0223",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "LLM output contains reasoning/explanation text instead of executable code. No function or class definition found — generation collapsed to natural language.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0224",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [What about if a row is not a list? Like grid = [ [0,1], (1,0) ] → raises TypeError for the second ro]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0225",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'is_Sub_Array' modified during optimization (similarity=0.75). New optimized logic produces different results for edge cases.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0226",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0227",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0228",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0229",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.89). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0230",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0231",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [try: | converted = float(num) | except ValueError:]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0232",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [continue | else: | result].",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0233",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 7/7 valid test inputs. Tests expect return values but get exceptions. E.g.: assert is_prime(-5) == False.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0234",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0235",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 5/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert dict_depth({'a':1, 'b': {'c':'python'}})==2.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0236",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0237",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.89). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0238",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0239",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Timeout/RecursionError — new code introduces performance regression or infinite recursion.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0240",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'pancake_sort' changed (sim=0.58). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0241",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 5/5 valid test inputs. Tests expect return values but get exceptions. E.g.: assert remove_nested(('BBeujUUS', '', 'cHImXR', 'BeujUUS')) .",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0242",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0243",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [result = self.smallest_change(args[0]) | results.append(result) | except]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0244",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'snake_to_camel' modified during optimization (similarity=0.70). New optimized logic produces different results for edge cases.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0245",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0246",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0247",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0248",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code nearly identical but optimization changed edge-case behavior. Subtle semantic collision.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0249",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert intersection([1, 2], [2, 3]) == 'NO'.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0250",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0251",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.86). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0252",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0253",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.91). Dominant error: AssertionError (5/5 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0254",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0255",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert check_Consecutive([1,2,1]) == False.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0256",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0257",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0258",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Parameter 'dict' shadows builtin type, causing isinstance() to fail with TypeError.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0259",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'even_bit_set_number' changed (sim=0.73). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0260",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Parameter 'dict' shadows builtin type, causing isinstance() to fail with TypeError.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0261",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.89). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0262",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "LLM output contains reasoning/explanation text instead of executable code. No function or class definition found — generation collapsed to natural language.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0263",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'sum_non_cached'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0264",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 4/7 valid test inputs. Tests expect return values but get exceptions. E.g.: assert sum_Of_Subarray_Prod([]) == 20.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0265",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0266",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0267",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0268",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function '__init__' changed (sim=0.60). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0269",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0270",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.83). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0271",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert is_perfect_square(-9) == False.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0272",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0273",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert math.isclose(angle_complex(0,1j), 1.5707963267948966,.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0274",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function '__init__' changed (sim=0.57). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0275",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0276",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0277",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 3/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert polar_rect(-1, 0) == ((1.0, 3.141592653589793), (-2+2.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0278",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Parameter 'dict' shadows builtin type, causing isinstance() to fail with TypeError.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0279",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [results.append(None) |  | return results].",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0280",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0281",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0282",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0283",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.25). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0284",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0285",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0286",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0287",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0288",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0289",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'next_smallest_palindrome' modified during optimization (similarity=0.70). New optimized logic produces different results for edge cases.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0290",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [Now, what about value errors? The problem says that invalid values (e.g., out of range) should raise]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0291",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Code substantially rewritten (overall similarity=0.01). Prior behavior lost despite no individual function showing major changes.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0292",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.87). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0293",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Code very similar to prev but some constraint was lost. Subtle context loss in minor modification.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0294",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0295",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "LLM output contains reasoning/explanation text instead of executable code. No function or class definition found — generation collapsed to natural language.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0296",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'combinations_list' changed (sim=0.67). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0297",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 3/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert polar_rect(-1, 0) == ((1.0, 3.141592653589793), (-2+2.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0298",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0299",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert decode_shift('tantywccpjkimslotpzs') == 'oviotrxxkefd.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0300",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'find_length' modified during optimization (similarity=0.76). New optimized logic produces different results for edge cases.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0301",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert math.isclose(angle_complex(0,1j), 1.5707963267948966,.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0302",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError/ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert sum_of_digits([10,20,-4,5,-70])==19.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0303",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.87). Dominant error: Timeout (7/7 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0304",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0305",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0306",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert make_palindrome('') == ''.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0307",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError/ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert list_tuple(['apple', 'banana', 'cherry', 'date']) == .",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0308",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0309",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Entire functions/methods removed: {'count_consonants'}. Tests reference these missing symbols.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0310",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "LLM output contains reasoning/explanation text instead of executable code. No function or class definition found — generation collapsed to natural language.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0311",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0312",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.88). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0313",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0314",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0315",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 2/2 valid test inputs. Tests expect return values but get exceptions. E.g.: assert all_prefixes('') == [].",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0316",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0317",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0318",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [dp[0] =1 |  | i=1 (odd): (1+1)(1+5)/4 =]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0319",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Code very similar to prev but some constraint was lost. Subtle context loss in minor modification.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0320",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 1/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert remove_kth_element([1, 2, 3, 4, 5], 5) == [1, 2, 3, 4.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0321",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0322",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function '__init__' was extensively rewritten (similarity=0.17). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0323",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [ | def get_stats(self): | return self.stats.copy()]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0324",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [But given the user's instruction, I have to proceed with the code as per the requirements. So, the c]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0325",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [elif n == 3: | return 0 | a, b]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0326",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0327",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 2/2 valid test inputs. Tests expect return values but get exceptions. E.g.: assert is_nonagonal(0) == 0.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0328",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [results.append(None) | print(f\"Error processing argument {arg}: {e}\") | return results].",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0329",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Moderate changes (sim=0.82) caused test failures. New logic conflicts with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0330",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-3"
+    ],
+    "primary_type": "CC-3",
+    "notes": "Runtime errors [ZeroDivisionError(10)] indicate data structure or state assumptions are inconsistent between new and existing code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0331",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0332",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'get_median' modified during optimization (similarity=0.67). New optimized logic produces different results for edge cases.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0333",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError from newly added validation that rejects valid inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0334",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0335",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0336",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'is_undulating' changed (sim=0.71). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0337",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.04). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0338",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0339",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function '__init__' was extensively rewritten (similarity=0.20). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0340",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert min_val(['Python', 3, 2, 4, 5, 'version'])==2.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0341",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0342",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0343",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Assertion failures on regression tests (overall sim=0.84). Current turn's changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0344",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 1/1 valid test inputs. Tests expect return values but get exceptions. E.g.: assert divisible_by_digits(False, True) == [1].",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0345",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0346",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0347",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "Function 'clear_cache' signature changed from () to (self). Tests call with old interface, causing TypeError.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0348",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \".",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0349",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 6/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert extract_singly([[3, 4, 5], [4, 5, 7], [1, 4]]) == {1,.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0350",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0351",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0352",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Parameter 'dict' shadows builtin type, causing isinstance() to fail with TypeError.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0353",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [self.logger = logging.getLogger('is_multiply_prime') | self.stats = {'calls': 0, 'cache_hits': 0, 'e]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0354",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0355",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function '__init__' changed (sim=0.37). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0356",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [So, the expected results are: |  | [[1,4,5], [], None]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0357",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0358",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 7/7 valid test inputs. Tests expect return values but get exceptions. E.g.: assert max_length([[], [1, 2, 3], [4, 5]]) == (3, [1, 2, 3]).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0359",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0360",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.57). Dominant error: AssertionError (3/3 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0361",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0362",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0363",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Entire functions/methods removed: {'get_stats', 'clear_cache', '__init__', 'merge_sorted_list_batch'}. Tests reference these missing symbols.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0364",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Attributes {'is_integer'} existed in prev_code but are missing/incomplete in current code. Function structure preserved but internal details partially forgotten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0365",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function 'polar_rect' was extensively rewritten (similarity=0.27). Prior behavior lost — tests expect old output but get new output.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0366",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0367",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Parameter 'dict' shadows builtin type, causing isinstance() to fail with TypeError.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0368",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0369",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.34). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0370",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0371",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.27). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0372",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code nearly identical but optimization changed edge-case behavior. Subtle semantic collision.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0373",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "TypeError from logic changes — new code's type handling is incompatible with test expectations.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0374",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM produced code that fails all original tests — complete implementation failure.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0375",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new ValueError guards that reject 9/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert pair_xor_Sum([5,9,7,6],4) == 47.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0376",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'starts_one_ends' changed (sim=0.76). New logic produces wrong results for previously-passing inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0377",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "LLM added new TypeError guards that reject 10/10 valid test inputs. Tests expect return values but get exceptions. E.g.: assert check_dict_case({'p': 'pineapple', 'b': 'banana'}) ==.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0378",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code nearly identical but optimization changed edge-case behavior. Subtle semantic collision.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0379",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0380",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError from newly added validation that rejects valid inputs.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0381",
+    "annotator": "A1",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "ValueError without identifiable new guards — prior constraint was likely lost or overwritten.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0382",
+    "annotator": "A1",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code has syntax errors — output appears truncated or malformed. Last lines: [ | def get_stats(self): | return self.stats.copy()]. Contains reasoning traces mixed with code.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0383",
+    "annotator": "A1",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Moderate changes (sim=0.89) caused test failures. New logic conflicts with prior behavior.",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0384",
+    "annotator": "A1",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.18). Dominant error: AssertionError (10/10 tests).",
+    "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  }
+]

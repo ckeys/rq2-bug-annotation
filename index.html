@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RQ2 Bug Annotation</title>
+<style>
+:root { --primary: #2563eb; --danger: #dc2626; --success: #16a34a; --gray: #6b7280; --bg: #f9fafb; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: #1f2937; line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+.header { background: white; border-bottom: 2px solid var(--primary); padding: 1rem; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+.header h1 { font-size: 1.3rem; color: var(--primary); }
+.header .info { color: var(--gray); font-size: 0.9rem; }
+.card { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 1.5rem; margin-bottom: 1rem; }
+.card h2 { font-size: 1.1rem; margin-bottom: 0.8rem; color: #374151; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; }
+pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 6px; overflow-x: auto; font-size: 0.82rem; line-height: 1.5; max-height: 400px; overflow-y: auto; white-space: pre-wrap; word-break: break-word; }
+.meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; margin-bottom: 1rem; }
+.meta-item { background: #f3f4f6; padding: 0.5rem 0.8rem; border-radius: 4px; font-size: 0.85rem; }
+.meta-item strong { color: #374151; }
+.test-fail { background: #fef2f2; border-left: 3px solid var(--danger); padding: 0.8rem; margin: 0.4rem 0; border-radius: 4px; font-size: 0.82rem; }
+.test-fail code { background: #fee2e2; padding: 0.1rem 0.3rem; border-radius: 2px; font-size: 0.8rem; display: block; white-space: pre-wrap; word-break: break-word; }
+.taxonomy-group { margin-bottom: 1rem; }
+.taxonomy-group h3 { font-size: 0.95rem; color: var(--primary); margin-bottom: 0.4rem; }
+.bug-option { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.4rem 0.6rem; border-radius: 4px; margin: 0.2rem 0; cursor: pointer; }
+.bug-option:hover { background: #eff6ff; }
+.bug-option label { cursor: pointer; font-size: 0.9rem; }
+.bug-option .desc { color: var(--gray); font-size: 0.8rem; }
+.primary-select { margin-top: 1rem; padding: 1rem; background: #eff6ff; border-radius: 6px; }
+.primary-select select { padding: 0.4rem 0.6rem; border-radius: 4px; border: 1px solid #d1d5db; font-size: 0.9rem; }
+.btn { display: inline-block; padding: 0.6rem 1.5rem; border: none; border-radius: 6px; font-size: 0.95rem; cursor: pointer; text-decoration: none; }
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: #1d4ed8; }
+.btn-success { background: var(--success); color: white; }
+.btn-danger { background: var(--danger); color: white; }
+.btn-outline { background: white; color: var(--primary); border: 1px solid var(--primary); }
+.btn-outline:hover { background: #eff6ff; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.progress-bar { background: #e5e7eb; border-radius: 999px; height: 8px; margin: 0.5rem 0; }
+.progress-fill { background: var(--success); height: 100%; border-radius: 999px; transition: width 0.3s; }
+.nav { display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem; flex-wrap: wrap; }
+.badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+.badge-done { background: #dcfce7; color: #166534; }
+.badge-pending { background: #fef3c7; color: #92400e; }
+.login-box { max-width: 500px; margin: 4rem auto; text-align: center; }
+.login-box select, .login-box input { padding: 0.5rem 1rem; font-size: 1rem; border-radius: 6px; border: 1px solid #d1d5db; margin: 0.5rem 0; width: 100%; }
+.notes-area { width: 100%; min-height: 60px; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 6px; font-size: 0.9rem; resize: vertical; }
+.diff-section { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+@media (max-width: 768px) { .diff-section { grid-template-columns: 1fr; } }
+.toast { position: fixed; top: 1rem; right: 1rem; padding: 0.8rem 1.5rem; border-radius: 8px; color: white; font-weight: 600; z-index: 999; transition: opacity 0.3s; }
+.toast-success { background: var(--success); }
+.toast-error { background: var(--danger); }
+.sample-table { width: 100%; font-size: 0.85rem; border-collapse: collapse; }
+.sample-table thead tr { text-align: left; border-bottom: 2px solid #e5e7eb; }
+.sample-table th, .sample-table td { padding: 0.4rem 0.5rem; }
+.sample-table tbody tr { border-bottom: 1px solid #f3f4f6; cursor: pointer; }
+.sample-table tbody tr:hover { background: #eff6ff; }
+.loading { text-align: center; padding: 2rem; color: var(--gray); }
+.guideline-link { font-size: 0.85rem; color: var(--primary); text-decoration: underline; }
+#toast { display: none; }
+</style>
+</head>
+<body>
+
+<div id="toast" class="toast"></div>
+
+<!-- LOGIN PAGE -->
+<div id="page-login" class="container" style="display:none;">
+<div class="login-box card">
+    <h1 style="color: var(--primary); margin-bottom: 0.5rem;">RQ2 Bug Annotation</h1>
+    <p style="color: var(--gray); margin-bottom: 1.5rem;">Multi-Turn LLM Bug Classification</p>
+    <div style="text-align: left; margin-bottom: 1rem;">
+        <label style="font-weight: 600;">Annotator ID:</label>
+        <select id="login-annotator">
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+            <option value="A4">A4</option>
+        </select>
+    </div>
+    <div style="text-align: left; margin-bottom: 1rem;">
+        <label style="font-weight: 600;">GitHub Token (with repo Contents write access):</label>
+        <input type="password" id="login-token" placeholder="ghp_xxxx or github_pat_xxxx">
+        <p style="font-size:0.8rem; color:var(--gray); margin-top:0.3rem;">Token is stored locally in your browser only. Never sent anywhere except GitHub API.</p>
+    </div>
+    <button class="btn btn-primary" onclick="doLogin()" style="width:100%;">Start Annotating</button>
+    <p id="login-task-count" style="margin-top: 1rem; font-size: 0.85rem; color: var(--gray);"></p>
+    <p style="margin-top: 0.5rem;"><a href="data/annotation_guideline.md" target="_blank" class="guideline-link">View Annotation Guideline</a></p>
+</div>
+</div>
+
+<!-- DASHBOARD PAGE -->
+<div id="page-dashboard" class="container" style="display:none;">
+<div class="header">
+    <h1>RQ2 Bug Annotation</h1>
+    <div class="info">Annotator: <strong id="dash-annotator"></strong> | <button class="btn btn-outline" style="padding:0.3rem 0.8rem; font-size:0.8rem;" onclick="doLogout()">Logout</button></div>
+</div>
+<div class="card">
+    <h2>Progress: <span id="dash-progress-text"></span></h2>
+    <div class="progress-bar"><div class="progress-fill" id="dash-progress-bar"></div></div>
+</div>
+<div class="card">
+    <h2>Samples</h2>
+    <table class="sample-table">
+    <thead><tr><th>ID</th><th>Task</th><th>Turn</th><th>Model</th><th>Severity</th><th>Status</th><th>Action</th></tr></thead>
+    <tbody id="dash-samples"></tbody>
+    </table>
+</div>
+</div>
+
+<!-- ANNOTATE PAGE -->
+<div id="page-annotate" class="container" style="display:none;">
+<div class="header">
+    <h1 id="ann-title"></h1>
+    <div class="info">Annotator: <strong id="ann-annotator"></strong> | <button class="btn btn-outline" style="padding:0.3rem 0.8rem; font-size:0.8rem;" onclick="showDashboard()">Dashboard</button></div>
+</div>
+<div class="card">
+    <h2>Context</h2>
+    <div class="meta" id="ann-meta"></div>
+</div>
+<div class="card">
+    <h2>Original Task Prompt</h2>
+    <pre id="ann-original-prompt"></pre>
+</div>
+<div class="card">
+    <h2>Current Turn Prompt</h2>
+    <pre id="ann-prompt"></pre>
+</div>
+<div class="card">
+    <h2>Code Comparison</h2>
+    <div class="diff-section">
+        <div>
+            <h3 style="font-size:0.9rem; margin-bottom:0.3rem; color:var(--success);">Previous Code (passed tests)</h3>
+            <pre id="ann-prev-code"></pre>
+        </div>
+        <div>
+            <h3 style="font-size:0.9rem; margin-bottom:0.3rem; color:var(--danger);">Current Code (failed tests)</h3>
+            <pre id="ann-code"></pre>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <h2>Failed Tests (<span id="ann-fail-count"></span>)</h2>
+    <div id="ann-failed-tests"></div>
+</div>
+<div class="card">
+    <h2>Bug Classification (select all that apply)</h2>
+    <div id="ann-taxonomy"></div>
+    <div class="primary-select">
+        <label><strong>Primary Bug Type</strong> (the single most important root cause):</label><br>
+        <select id="ann-primary"></select>
+    </div>
+</div>
+<div class="card">
+    <h2>Notes (optional)</h2>
+    <textarea id="ann-notes" class="notes-area" placeholder="Any additional observations..."></textarea>
+</div>
+<div class="nav">
+    <button class="btn btn-outline" id="ann-prev-btn" onclick="navPrev()">← Previous</button>
+    <button class="btn btn-primary" id="ann-save-btn" onclick="saveAnnotation()">Save Annotation</button>
+    <button class="btn btn-outline" id="ann-next-btn" onclick="navNext()">Next →</button>
+    <button class="btn btn-outline" style="margin-left:auto;" onclick="showDashboard()">Dashboard</button>
+</div>
+</div>
+
+<script>
+const REPO_OWNER = 'ckeys';
+const REPO_NAME = 'rq2-bug-annotation';
+const ANNOTATIONS_PATH = 'data/annotations.json';
+const TASKS_PATH = 'data/annotation_tasks.json';
+
+const BUG_TAXONOMY = {
+    "Baseline Failure (T1 only)": {
+        "BF": ["Baseline Failure", "T1 implementation error (not a multi-turn bug). Use ONLY for Turn 1 samples."]
+    },
+    "Class I: Context-Loss": {
+        "CL-1": ["Context Loss", "Forgets or overwrites a constraint/behavior from a prior turn"],
+        "CL-3": ["Partial Context Recall", "Function exists but internal logic has gaps or omissions"]
+    },
+    "Class II: Cross-Turn Conflict": {
+        "CC-1": ["Semantic Collision", "New logic contradicts prior logic; includes timeouts/infinite loops"],
+        "CC-2": ["Interface Mismatch", "New code breaks prior interfaces/signatures"],
+        "CC-3": ["Integration Inconsistency", "New and old code individually correct but fail to integrate"],
+        "CC-4": ["Over-Guarding", "New validation/guards reject inputs the original tests treat as valid"]
+    },
+    "Class III: Accumulation": {
+        "AC-1": ["Regression via Omission", "Entire function/method/block silently removed"],
+        "AC-2": ["Complexity Collapse", "Code truncated, empty, or syntactically broken"],
+        "AC-3": ["Style Drift", "Inconsistent naming/patterns across turns cause errors"]
+    }
+};
+
+const ALL_BUG_TYPES = [];
+for (const cls of Object.values(BUG_TAXONOMY)) {
+    for (const bt of Object.keys(cls)) ALL_BUG_TYPES.push(bt);
+}
+
+let ghToken = '';
+let annotatorId = '';
+let tasks = [];
+let annotations = [];
+let annotationsSha = null;
+let currentIdx = -1;
+
+function escapeHtml(s) {
+    const div = document.createElement('div');
+    div.textContent = s;
+    return div.innerHTML;
+}
+
+function showToast(msg, type) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.className = 'toast toast-' + type;
+    el.style.display = 'block';
+    setTimeout(() => { el.style.display = 'none'; }, 3000);
+}
+
+function showPage(id) {
+    for (const p of ['login', 'dashboard', 'annotate']) {
+        document.getElementById('page-' + p).style.display = (p === id) ? 'block' : 'none';
+    }
+}
+
+async function ghApiFetch(path, options = {}) {
+    const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`;
+    const headers = {
+        'Authorization': `token ${ghToken}`,
+        'Accept': 'application/vnd.github.v3+json',
+        ...options.headers
+    };
+    return fetch(url, { ...options, headers });
+}
+
+async function loadTasks() {
+    if (tasks.length > 0) return;
+    const baseUrl = window.location.href.replace(/\/[^/]*$/, '/');
+    const resp = await fetch(baseUrl + TASKS_PATH);
+    if (!resp.ok) throw new Error('Failed to load tasks');
+    tasks = await resp.json();
+}
+
+async function loadAnnotations() {
+    try {
+        const resp = await ghApiFetch(ANNOTATIONS_PATH);
+        if (resp.status === 404) {
+            annotations = [];
+            annotationsSha = null;
+            return;
+        }
+        const data = await resp.json();
+        annotationsSha = data.sha;
+        const content = atob(data.content.replace(/\n/g, ''));
+        const decoder = new TextDecoder('utf-8');
+        const bytes = Uint8Array.from(content, c => c.charCodeAt(0));
+        annotations = JSON.parse(decoder.decode(bytes));
+    } catch (e) {
+        console.error('Error loading annotations:', e);
+        annotations = [];
+        annotationsSha = null;
+    }
+}
+
+async function saveAnnotationsToGH() {
+    const content = JSON.stringify(annotations, null, 2);
+    const encoder = new TextEncoder();
+    const bytes = encoder.encode(content);
+    let binary = '';
+    for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
+    const b64 = btoa(binary);
+
+    const body = {
+        message: `Annotation update by ${annotatorId}`,
+        content: b64,
+        branch: 'main'
+    };
+    if (annotationsSha) body.sha = annotationsSha;
+
+    const resp = await ghApiFetch(ANNOTATIONS_PATH, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+    });
+
+    if (!resp.ok) {
+        const err = await resp.json();
+        if (resp.status === 409) {
+            await loadAnnotations();
+            return saveAnnotationsToGH();
+        }
+        throw new Error(err.message || 'Save failed');
+    }
+
+    const result = await resp.json();
+    annotationsSha = result.content.sha;
+}
+
+function getMyAnnotations() {
+    return annotations.filter(a => a.annotator === annotatorId);
+}
+
+function getMyDoneIds() {
+    return new Set(getMyAnnotations().map(a => a.sample_id));
+}
+
+async function doLogin() {
+    annotatorId = document.getElementById('login-annotator').value;
+    ghToken = document.getElementById('login-token').value.trim();
+
+    if (!ghToken) {
+        showToast('Please enter your GitHub token', 'error');
+        return;
+    }
+
+    try {
+        showToast('Verifying token...', 'success');
+        const resp = await fetch('https://api.github.com/user', {
+            headers: { 'Authorization': `token ${ghToken}` }
+        });
+        if (!resp.ok) throw new Error('Invalid token');
+
+        localStorage.setItem('rq2_annotator', annotatorId);
+        localStorage.setItem('rq2_token', ghToken);
+
+        await loadTasks();
+        await loadAnnotations();
+        showDashboard();
+    } catch (e) {
+        showToast('Token verification failed: ' + e.message, 'error');
+    }
+}
+
+function doLogout() {
+    localStorage.removeItem('rq2_annotator');
+    localStorage.removeItem('rq2_token');
+    ghToken = '';
+    annotatorId = '';
+    showPage('login');
+}
+
+function showDashboard() {
+    showPage('dashboard');
+    document.getElementById('dash-annotator').textContent = annotatorId;
+
+    const doneIds = getMyDoneIds();
+    const total = tasks.length;
+    const done = doneIds.size;
+    document.getElementById('dash-progress-text').textContent = `${done} / ${total}`;
+    document.getElementById('dash-progress-bar').style.width = (total > 0 ? (done / total * 100) : 0) + '%';
+
+    const tbody = document.getElementById('dash-samples');
+    tbody.innerHTML = '';
+    tasks.forEach((t, idx) => {
+        const isDone = doneIds.has(t.sample_id);
+        const tr = document.createElement('tr');
+        tr.onclick = () => showAnnotate(idx);
+        tr.innerHTML = `
+            <td>${escapeHtml(t.sample_id)}</td>
+            <td>${escapeHtml(t.task_id)}</td>
+            <td>T${t.turn}</td>
+            <td>${escapeHtml(t.model)}</td>
+            <td>${escapeHtml(t.severity)}</td>
+            <td><span class="badge ${isDone ? 'badge-done' : 'badge-pending'}">${isDone ? 'Done' : 'Pending'}</span></td>
+            <td><button class="btn btn-outline" style="padding:0.2rem 0.6rem; font-size:0.8rem;" onclick="event.stopPropagation(); showAnnotate(${idx})">${isDone ? 'Edit' : 'Annotate'}</button></td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function showAnnotate(idx) {
+    currentIdx = idx;
+    const t = tasks[idx];
+    showPage('annotate');
+
+    document.getElementById('ann-annotator').textContent = annotatorId;
+    document.getElementById('ann-title').textContent = `${t.sample_id} — ${t.task_id}`;
+
+    document.getElementById('ann-meta').innerHTML = [
+        ['Task ID', t.task_id], ['Model', t.model], ['Turn', `T${t.turn}`],
+        ['Change Type', t.change_type], ['Source', t.source || ''],
+        ['Regression Rate', `${(t.regression_rate * 100).toFixed(1)}%`],
+        ['Severity', t.severity],
+        ['Pass/Total', `${t.regression_pass}/${t.regression_total}`]
+    ].map(([k, v]) => `<div class="meta-item"><strong>${k}:</strong> ${escapeHtml(String(v))}</div>`).join('');
+
+    document.getElementById('ann-original-prompt').textContent = t.original_task_prompt || '(none)';
+    document.getElementById('ann-prompt').textContent = t.prompt || '(none)';
+    document.getElementById('ann-prev-code').textContent = t.prev_code || '(no previous code)';
+    document.getElementById('ann-code').textContent = t.code || '(no code)';
+
+    const failedTests = t.failed_tests || [];
+    document.getElementById('ann-fail-count').textContent = failedTests.length;
+    const ftDiv = document.getElementById('ann-failed-tests');
+    ftDiv.innerHTML = '';
+    const showMax = 10;
+    failedTests.slice(0, showMax).forEach(ft => {
+        const d = document.createElement('div');
+        d.className = 'test-fail';
+        d.innerHTML = `<code>${escapeHtml(ft.test || '')}</code><span style="color:var(--danger);">${escapeHtml(ft.error || '')}</span>`;
+        ftDiv.appendChild(d);
+    });
+    if (failedTests.length > showMax) {
+        const p = document.createElement('p');
+        p.style.cssText = 'color:var(--gray); font-size:0.85rem; margin-top:0.5rem;';
+        p.textContent = `... and ${failedTests.length - showMax} more`;
+        ftDiv.appendChild(p);
+    }
+
+    const taxDiv = document.getElementById('ann-taxonomy');
+    taxDiv.innerHTML = '';
+    for (const [clsName, types] of Object.entries(BUG_TAXONOMY)) {
+        const group = document.createElement('div');
+        group.className = 'taxonomy-group';
+        group.innerHTML = `<h3>${escapeHtml(clsName)}</h3>`;
+        for (const [btId, [name, desc]] of Object.entries(types)) {
+            const opt = document.createElement('div');
+            opt.className = 'bug-option';
+            opt.innerHTML = `
+                <input type="checkbox" id="bt_${btId}" value="${btId}">
+                <label for="bt_${btId}"><strong>${btId}</strong>: ${escapeHtml(name)} <span class="desc">— ${escapeHtml(desc)}</span></label>
+            `;
+            group.appendChild(opt);
+        }
+        taxDiv.appendChild(group);
+    }
+
+    const primarySel = document.getElementById('ann-primary');
+    primarySel.innerHTML = '<option value="">-- Select --</option>';
+    ALL_BUG_TYPES.forEach(bt => {
+        primarySel.innerHTML += `<option value="${bt}">${bt}</option>`;
+    });
+
+    const existing = annotations.find(a => a.sample_id === t.sample_id && a.annotator === annotatorId);
+    if (existing) {
+        (existing.bug_types || []).forEach(bt => {
+            const cb = document.getElementById('bt_' + bt);
+            if (cb) cb.checked = true;
+        });
+        primarySel.value = existing.primary_type || '';
+        document.getElementById('ann-notes').value = existing.notes || '';
+    } else {
+        document.getElementById('ann-notes').value = '';
+    }
+
+    document.getElementById('ann-prev-btn').disabled = (idx <= 0);
+    document.getElementById('ann-next-btn').disabled = (idx >= tasks.length - 1);
+
+    window.scrollTo(0, 0);
+}
+
+function navPrev() { if (currentIdx > 0) showAnnotate(currentIdx - 1); }
+function navNext() { if (currentIdx < tasks.length - 1) showAnnotate(currentIdx + 1); }
+
+async function saveAnnotation() {
+    const t = tasks[currentIdx];
+    const bugTypes = [];
+    document.querySelectorAll('#ann-taxonomy input[type=checkbox]:checked').forEach(cb => {
+        bugTypes.push(cb.value);
+    });
+    const primaryType = document.getElementById('ann-primary').value;
+    const notes = document.getElementById('ann-notes').value.trim();
+
+    if (bugTypes.length === 0) {
+        showToast('Please select at least one bug type', 'error');
+        return;
+    }
+    if (!primaryType) {
+        showToast('Please select a primary bug type', 'error');
+        return;
+    }
+    if (!bugTypes.includes(primaryType)) {
+        showToast('Primary type must be one of the selected bug types', 'error');
+        return;
+    }
+
+    const annotation = {
+        sample_id: t.sample_id,
+        annotator: annotatorId,
+        bug_types: bugTypes,
+        primary_type: primaryType,
+        notes: notes,
+        timestamp: new Date().toISOString()
+    };
+
+    const existIdx = annotations.findIndex(a => a.sample_id === t.sample_id && a.annotator === annotatorId);
+    if (existIdx >= 0) {
+        annotations[existIdx] = annotation;
+    } else {
+        annotations.push(annotation);
+    }
+
+    const saveBtn = document.getElementById('ann-save-btn');
+    saveBtn.disabled = true;
+    saveBtn.textContent = 'Saving...';
+
+    try {
+        await saveAnnotationsToGH();
+        showToast('Saved successfully!', 'success');
+        if (currentIdx < tasks.length - 1) {
+            showAnnotate(currentIdx + 1);
+        }
+    } catch (e) {
+        showToast('Save failed: ' + e.message, 'error');
+    } finally {
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Annotation';
+    }
+}
+
+async function init() {
+    const savedAnnotator = localStorage.getItem('rq2_annotator');
+    const savedToken = localStorage.getItem('rq2_token');
+
+    try {
+        await loadTasks();
+        document.getElementById('login-task-count').textContent = `${tasks.length} samples to annotate`;
+    } catch (e) {
+        document.getElementById('login-task-count').textContent = 'Failed to load tasks';
+    }
+
+    if (savedAnnotator && savedToken) {
+        annotatorId = savedAnnotator;
+        ghToken = savedToken;
+        document.getElementById('login-annotator').value = annotatorId;
+        try {
+            await loadAnnotations();
+            showDashboard();
+            return;
+        } catch (e) {
+            console.error('Auto-login failed:', e);
+        }
+    }
+    showPage('login');
+}
+
+init();
+</script>
+</body>
+</html>
