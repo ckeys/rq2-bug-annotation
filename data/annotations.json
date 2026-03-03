@@ -7680,5 +7680,3851 @@
     "primary_type": "BF",
     "notes": "[unanimous] T1: Partial implementation failure (rate=0.18). Edge cases not handled. Main error: AssertionError.",
     "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0001",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(n, int): → raise TypeError(\"Argument must be an integer.\"); if n < 0: → raise ValueError(\"Argument must be a non-negative integer.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0002",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'even_bit_set_number' modified (sim=0.52). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0003",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.32). Dominant error: TypeError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0004",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 3 tests (rate=0.95). Dominant error: NameError (3/3).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0005",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.64). Dominant error: IndexError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0006",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 6 new guard(s) reject 10/10 valid inputs. Guards: [if not all(isinstance(lst, list) for lst in [list1, list2, list3]): → raise TypeError(\"All arguments must be of type list.\"); if not all(len(lst) == len(list1) for lst in [list2, list3]): → raise ValueError(\"All input lists must have the same length.\"); if not all(isinstance(item, str) for item in list1): → raise TypeError(\"All elements in the first list must be strings.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0007",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Syntax invalid code (SyntaxError in 10/10 tests). Code appears truncated or garbled.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0008",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0009",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 1/1 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"Input must be a list\"); if not lst: → raise ValueError(\"List cannot be empty\"); if not isinstance(num, int): → raise TypeError(\"All elements in the list must be integers\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0010",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: CoT leakage in output — code is not valid Python. Labeled BF per T1 rule.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0011",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0012",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code very similar (sim=0.93) but all tests fail with AssertionError — subtle semantic difference.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0013",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0014",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 3/10 valid inputs. Guards: [if not isinstance(args, tuple) or len(args) != 2: → raise TypeError(f\"Each element in arg_list must be a tuple of (r, theta), got {args}\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0015",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 1/1 valid inputs. Guards: [if not isinstance(n, (int, float)): → raise TypeError(\"The argument must be an integer or a float.\"); elif isinstance(n, float): → raise ValueError(\"The argument must be a whole number if it is a float.\"); if n == 0: → raise ValueError(\"The argument cannot be zero.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0016",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (4/10) in Interface Restructuring turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0017",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0018",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'text_lowercase_underscore' modified (sim=0.70). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0019",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0020",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T5: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0021",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (2/2) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0022",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (9/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0023",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (1/10) in Interface Restructuring turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0024",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: CoT leakage in output — code is not valid Python. Labeled BF per T1 rule.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0025",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0026",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.30). Dominant error: TypeError (8/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0027",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'similar_elements' modified (sim=0.74). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0028",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-3"
+    ],
+    "primary_type": "AC-3",
+    "notes": "NameError — style drift fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0029",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (1/4) in Performance Optimization turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0030",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0031",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'combinations_list_batch', 'clear_cache', 'combinations_list'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0032",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0033",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (1/1) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0034",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'AddTupleProcessor' modified (sim=0.81). 7/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0035",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T5: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0036",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.77). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0037",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T4: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0038",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0039",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Timeout/RecursionError in 4/10 tests — new algorithm logic likely has a loop/recursion error.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0040",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (2/2) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0041",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 7 new guard(s) reject 10/10 valid inputs. Guards: [if not all(isinstance(x, int) or isinstance(x, str) for x in arr): → raise TypeError(\"All elements in the list must be integers or strings.\"); if not isinstance(n, int) and not isinstance(n, str): → raise TypeError(\"The second argument must be an integer or a string.\"); if n == '' or n == ' ': → raise ValueError(\"The second argument cannot be an empty string.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0042",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'remove_whitespaces', 'clear_cache', 'remove_whitespaces_batch'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0043",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'find_adverb_position' modified (sim=0.79). 7/7 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0044",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4",
+      "CL-3"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 11 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(tuples, list): → raise TypeError(\"The input must be a list of tuples.\"); if not tuples: → raise ValueError(\"The list of tuples cannot be empty.\"); if not isinstance(item, tuple): → raise TypeError(\"Each element must be a tuple.\")]. Code shrank from 412 to 66 lines (ratio=0.16) — partial context recall.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0045",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T7 ValueError + low similarity (0.15) — prior behavior lost, now hitting inherited validation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0046",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(\"input_tuple contains non-numeric values\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0047",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0048",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0049",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0050",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.61). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0051",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'combinations_list' modified (sim=0.61). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0052",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'casefold' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0053",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'string_to_list' modified (sim=0.51). 9/9 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0054",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0055",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.30). Dominant error: AssertionError (8/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0056",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'surface_Area' modified (sim=0.59). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0057",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Syntax invalid code (SyntaxError in 10/10 tests). Code appears truncated or garbled.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0058",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: CoT leakage in output — code is not valid Python. Labeled BF per T1 rule.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0059",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'clear_cache', 'area_tetrahedron_batch', 'area_tetrahedron'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0060",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0061",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0062",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError — partial context recall fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0063",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0064",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'drop_empty' modified (sim=0.71). 9/9 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0065",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T6 ValueError + low similarity (0.41) — prior behavior lost, now hitting inherited validation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0066",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0067",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (1/10) in Functional Extension turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0068",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0069",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0070",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.68). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0071",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError (1/10) in Input Generalization turn — validation likely over-guarding.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0072",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'find_char_long' modified (sim=0.57). 9/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0073",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (1/1) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0074",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(arr, list): → raise TypeError(\"The 'arr' argument must be a list.\"); if not all(isinstance(x, (int, float)) for x in arr): → raise TypeError(\"All elements of 'arr' must be numbers (int or float).\"); if not isinstance(value, (int, float)): → raise TypeError(\"The 'value' argument must be a number (int or float).\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0075",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"Input must be a list.\"); if not isinstance(arg, (int, float)): → raise TypeError(f\"Element at index {i} must be a number.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0076",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 10/10 valid inputs. Guards: [ → raise TypeError(error_msg);  → raise TypeError(error_msg);  → raise ValueError(error_msg)].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0077",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T3: Function 'parabola_directrix' changed significantly (sim=0.45). 8/10 AssertionErrors — prior behavior lost.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0078",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (2/10) in Performance Optimization turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0079",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0080",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'clear_cache', 'snake_to_camel_batch', 'snake_to_camel'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0081",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'mean_absolute_deviation' modified (sim=0.76). 5/5 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0082",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s)/class(es): {'FindZeroProcessor'}. 10 NameError/AttributeError in tests.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0083",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0084",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'polar_rect_batch', 'clear_cache', 'polar_rect'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0085",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0086",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code very similar (sim=0.92) but all tests fail with AssertionError — subtle semantic difference.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0087",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-3"
+    ],
+    "primary_type": "AC-3",
+    "notes": "NameError — style drift fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0088",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'count_Substrings' modified (sim=0.75). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0089",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (1/1) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0090",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0091",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code very similar (sim=0.99) but all tests fail with AssertionError — subtle semantic difference.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0092",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Syntax invalid code (SyntaxError in 10/10 tests). Code appears truncated or garbled.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0093",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'MaxRunUppercaseProcessor' modified (sim=0.74). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0094",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0095",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"The first argument must be a list.\"); if len(lst) == 0: → raise ValueError(\"The list cannot be empty.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0096",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0097",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.75). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0098",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 6 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(base1, (int, float)): → raise TypeError(\"The first base must be a number.\"); if not isinstance(base2, (int, float)): → raise TypeError(\"The second base must be a number.\"); if not isinstance(height, (int, float)): → raise TypeError(\"The height must be a number.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0099",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0100",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code very similar (sim=0.96) but all tests fail with AssertionError — subtle semantic difference.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0101",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Syntax invalid code (SyntaxError in 10/10 tests). Code appears truncated or garbled.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0102",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T5: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0103",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0104",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0105",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 3 tests (rate=0.94). Dominant error: AssertionError (3/3).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0106",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0107",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.82). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0108",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(f\"Error converting input: {e}\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0109",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (5/5) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0110",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 3/10 valid inputs. Guards: [ → raise TypeError(error_msg);  → raise TypeError(error_msg);  → raise ValueError(error_msg)].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0111",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (1/10) in Performance Optimization turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0112",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 8/10 valid inputs. Guards: [ → raise ValueError(\"Input string cannot be converted to a number.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0113",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0114",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'ExtractEvenProcessor' modified (sim=0.70). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0115",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 6/6 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"The first argument must be a list.\"); if not isinstance(sublst, list): → raise TypeError(\"The second argument must be a list.\"); if any(not isinstance(item, (int, float, str)) for item in lst): → raise ValueError(\"All elements in the first list must be int, float, or str.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0116",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (7/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0117",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0118",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0119",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0120",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 7 tests (rate=0.00). Dominant error: AssertionError (7/7).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0121",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0122",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0123",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0124",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0125",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'LastDigitFactorialProcessor' modified (sim=0.68). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0126",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Function 'ParabolaDirectrixProcessor' modified (sim=0.59). 8/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0127",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0128",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(f\"Cannot convert '{s}' to a number.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0129",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.27). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0130",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (3/10) in Interface Restructuring turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0131",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'clear_cache', 'parabola_directrix', 'parabola_directrix_batch'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0132",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (3/10) in Performance Optimization turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0133",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'jacobsthal_num' modified (sim=0.66). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0134",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(f\"Cannot convert {value} to a number.\");  → raise TypeError(\"The second element of each tuple must be an integer or a string representing a number.\"); if second_value < 0: → raise ValueError(\"The second element of each tuple must be a non-negative number.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0135",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T4: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0136",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: TypeError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0137",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0138",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(item, str): → raise TypeError(f\"Element at index {j} in sublist at index {i} is not a string or a number.\");  → raise ValueError(f\"Element at index {j} in sublist at index {i} cannot be converted to a number.\"); if not isinstance(item, (int, float)): → raise TypeError(f\"Element at index {j} in sublist at index {i} is not a number.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0139",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0140",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'snake_to_camel' modified (sim=0.61). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0141",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (2/2) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0142",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'MaxOccurrencesProcessor' modified (sim=0.60). 6/6 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0143",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0144",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (3/3) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0145",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 2 tests (rate=0.96). Dominant error: AssertionError (2/2).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0146",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(\"The 'price' value must be convertible to a float.\");  → raise ValueError(\"The 'n' argument must be convertible to an integer.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0147",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0148",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0149",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'is_Diff', 'clear_cache', 'is_Diff_batch'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0150",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code very similar (sim=0.95) but all tests fail with AssertionError — subtle semantic difference.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0151",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0152",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0153",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (1/1) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0154",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0155",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 5 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(dictionary, dict): → raise TypeError(\"Input must be a dictionary\"); if not dictionary: → raise ValueError(\"Dictionary cannot be empty\"); if not isinstance(value, (int, float)): → raise TypeError(f\"Value for key '{key}' must be numeric (int or float)\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0156",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0157",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 3 tests (rate=0.95). Dominant error: AssertionError (3/3).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0158",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: Timeout (6/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0159",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (8/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0160",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (1/1) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0161",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0162",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 1/1 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"Input must be a list.\"); if not isinstance(num, int): → raise TypeError(\"All elements must be integers.\"); if num < 0: → raise ValueError(\"All elements must be non-negative.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0163",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0164",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 8 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(interval1, tuple): → raise TypeError(\"The first argument must be a tuple.\"); if len(interval1) != 2: → raise ValueError(\"The first argument must be a tuple of two integers.\"); if not all(isinstance(x, int) for x in interval1): → raise TypeError(\"Both elements of the first tuple must be integers.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0165",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0166",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0167",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(argument_tuples, list): → raise TypeError(f\"argument_tuples must be a list, got {type(argument_tuples).__name__}\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0168",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0169",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'EvenBitSetNumberProcessor' modified (sim=0.84). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0170",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0171",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 1/1 valid inputs. Guards: [ → raise ValueError(\"Invalid string for numeric conversion\"); elif isinstance(side, bool): → raise TypeError(\"side must be an integer, float, or string representation of a number\"); elif not isinstance(side, (int, float)): → raise TypeError(\"side must be an integer, float, or string representation of a number\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0172",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0173",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'logger' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0174",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T2: Unclassified failure (sim=0.82). Default to CL-1.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0175",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (9/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0176",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0177",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'SimilarElementsProcessor' modified (sim=0.85). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0178",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.11). Dominant error: AssertionError (8/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0179",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'EvenBitSetNumberProcessor' modified (sim=0.79). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0180",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0181",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"Input must be a list\"); if not all(isinstance(i, (int, float)) for i in lst): → raise TypeError(\"List must contain only numbers\"); if not all(isinstance(num, (int, float)) and num % 2 == 0 for i, num in enumerate(lst) if i % 2 == 0): → raise ValueError(\"Even positions must contain even numbers\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0182",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'is_lower' modified (sim=0.69). 3/3 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0183",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0184",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (6/6) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0185",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 6 new guard(s) reject 3/10 valid inputs. Guards: [ → raise ValueError(f\"Could not convert string '{value}' to a numeric value\");  → raise TypeError(f\"Argument must be numeric or string type, got {type(value).__name__}\"); if isinstance(e, TypeError): → raise TypeError(str(e))].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0186",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'heap_sort' modified (sim=0.64). 7/7 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0187",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'FindSumProcessor' modified (sim=0.78). 9/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0188",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (1/6) in Functional Extension turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0189",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0190",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 9/10 valid inputs. Guards: [ → raise ValueError(\"Year, month, and day must be valid numeric values.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0191",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 2/2 valid inputs. Guards: [ → raise ValueError(f\"String '{s}' cannot be converted to a float.\"); elif not isinstance(a, valid_types): → raise TypeError(\"All elements must be int, float, or a string that can be converted to a float.\"); elif not isinstance(b, valid_types): → raise TypeError(\"All elements must be int, float, or a string that can be converted to a float.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0192",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0193",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4",
+      "CL-3"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 7 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(f\"String '{item}' cannot be converted to a numeric type.\");  → raise TypeError(f\"Unsupported type: {type(item)}\"); if not isinstance(list1, list) or not isinstance(list2, list): → raise TypeError(\"Both arguments must be of type list.\")]. Code shrank from 198 to 80 lines (ratio=0.40) — partial context recall.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0194",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'VolumeConeProcessor' modified (sim=0.75). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0195",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0196",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(n, int): → raise TypeError(\"Input must be an integer.\"); if n < 0: → raise ValueError(\"Input must be a non-negative integer.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0197",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError suggests signature/interface change: TypeError: Argument 2 must contain only strings, but got bool",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0198",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0199",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T4 ValueError + low similarity (0.22) — prior behavior lost, now hitting inherited validation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0200",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(\"String representation of a number could not be converted.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0201",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Code shrank from 418 to 108 lines (ratio=0.26) — partial context recall.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0202",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'right_insertion', 'right_insertion_batch', 'clear_cache'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0203",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError — partial context recall fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0204",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0205",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T8: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0206",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 5/10 valid inputs. Guards: [if not isinstance(message, str): → raise TypeError(\"The message must be a string.\"); if not message.isalpha(): → raise ValueError(\"The message must contain only alphabetic characters.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0207",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(n, int): → raise TypeError(\"The input must be an integer.\"); if n < 0: → raise ValueError(\"The input must be a non-negative integer.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0208",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 1/1 valid inputs. Guards: [ → raise ValueError(\"String input must represent a valid number\"); if not isinstance(n, int): → raise TypeError(\"Input must be an integer or string representing an integer\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0209",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-3"
+    ],
+    "primary_type": "AC-3",
+    "notes": "NameError — style drift fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0210",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0211",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'similar_elements' modified (sim=0.53). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0212",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T5: Unclassified failure (sim=0.90). Default to CL-1.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0213",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (3/3) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0214",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: CoT leakage in output — code is not valid Python. Labeled BF per T1 rule.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0215",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 9/10 valid inputs. Guards: [ → raise ValueError(\"Invalid numeric string in date components.\"); if not (year.is_integer() and month.is_integer() and day.is_integer()): → raise ValueError(\"Date components must be integers.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0216",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0217",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s)/class(es): {'maxAverageOfPath', 'clear_cache', 'maxAverageOfPath_batch'}. 10 NameError/AttributeError in tests.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0218",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'clear_cache', 'find_Volume_batch', 'find_Volume'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0219",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.48). Dominant error: AssertionError (7/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0220",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0221",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0222",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: CoT leakage in output — code is not valid Python. Labeled BF per T1 rule.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0223",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0224",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0225",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'IsSubArrayProcessor' modified (sim=0.75). 3/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0226",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0227",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0228",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0229",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'surface_Area', 'clear_cache', 'surface_Area_batch'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0230",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s)/class(es): {'clear_cache', 'select_words_batch', 'select_words'}. 10 NameError/AttributeError in tests.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0231",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0232",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Syntax invalid code (SyntaxError in 10/10 tests). Code appears truncated or garbled.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0233",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 7/7 valid inputs. Guards: [if not n_float.is_integer(): → raise ValueError(f\"Input must be an integer, got '{n}'\"); if \"could not convert\" in str(e).lower(): → raise ValueError(f\"Could not convert string to number: '{n}'\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0234",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0235",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 5/10 valid inputs. Guards: [ → raise ValueError(\"String input must be a valid dictionary representation.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0236",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (5/5) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0237",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T4: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0238",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0239",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1",
+      "CL-1",
+      "CL-3"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Timeout/RecursionError in 4/10 tests — new algorithm logic likely has a loop/recursion error. T4: Function 'newman_prime' changed significantly (sim=0.24). 4/10 AssertionErrors — prior behavior lost. Code shrank from 454 to 57 lines (ratio=0.13) — partial context recall.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0240",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'pancake_sort' modified (sim=0.58). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0241",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 5/5 valid inputs. Guards: [if not isinstance(tpl, tuple): → raise TypeError(\"Input must be a tuple.\"); if not isinstance(item, (int, float)): → raise TypeError(\"All non-tuple elements must be integers or floats.\"); if isinstance(item, int) and (item < -1000 or item > 1000): → raise ValueError(\"Integer values must be within the range -1000 to 1000.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0242",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0243",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0244",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'SnakeToCamelProcessor' modified (sim=0.83). 8/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0245",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0246",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0247",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: ModuleNotFoundError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0248",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (1/10) in Performance Optimization turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0249",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0250",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0251",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s): {'clear_cache', 'encode', 'encode_batch'}. Tests fail with AssertionError — removed code was needed.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0252",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0253",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 5 tests (rate=0.91). Dominant error: AssertionError (5/5).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0254",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0255",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"Input must be a list\"); if not isinstance(item, int): → raise TypeError(\"All elements in the list must be integers\"); if len(set(lst)) != len(lst): → raise ValueError(\"List contains duplicate values\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0256",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0257",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0258",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0259",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'even_bit_set_number' modified (sim=0.73). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0260",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0261",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (5/10) in Functional Extension turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0262",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0263",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s)/class(es): {'sum', 'clear_cache', 'sum_batch'}. 10 NameError/AttributeError in tests.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0264",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 4/7 valid inputs. Guards: [if not all(isinstance(x, (int, float, str)) for x in lst): → raise TypeError(\"All elements in the list must be numbers or their string representations\");  → raise ValueError(f\"Cannot convert '{x}' to a number\"); if not isinstance(x, (int, float)): → raise TypeError(\"All elements in the list must be numbers or their string representations\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0265",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0266",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0267",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (1/1) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0268",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'RemoveNestedProcessor' modified (sim=0.80). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0269",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0270",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T5: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0271",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(n, (int, float)): → raise TypeError(\"Input must be an integer or a float.\"); if n < 0: → raise ValueError(\"Input must be a non-negative number.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0272",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T7 ValueError + low similarity (0.51) — prior behavior lost, now hitting inherited validation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0273",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(real, (int, float)): → raise TypeError(\"The real part must be an integer or float.\"); if not isinstance(imag, (int, float)): → raise TypeError(\"The imaginary part must be an integer or float.\"); if math.isnan(real): → raise ValueError(\"The real part must not be NaN.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0274",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'MaxProductProcessor' modified (sim=0.75). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0275",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0276",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0277",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 3/10 valid inputs. Guards: [ → raise ValueError(\"The radius 'r' must be a numeric value or a string representing a numeric value.\");  → raise ValueError(\"The angle 'theta' must be a numeric value or a string representing a numeric value.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0278",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 10/10 valid inputs. Guards: [ → raise TypeError(error_msg);  → raise ValueError(error_msg);  → raise TypeError(error_msg)].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0279",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Syntax invalid code (SyntaxError in 10/10 tests). Code appears truncated or garbled.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0280",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0281",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0282",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 6 new guard(s) reject 2/2 valid inputs. Guards: [ → raise ValueError(f\"String '{value}' represents a non-integer float\"); if \"non-integer\" in str(e): → raise ValueError(f\"String '{value}' cannot be converted to integer\");  → raise ValueError(f\"Invalid value for x: {e}\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0283",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.25). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0284",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0285",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0286",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0287",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0288",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0289",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'NextSmallestPalindromeProcessor' modified (sim=0.81). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0290",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0291",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "Low overall similarity (0.01) + 4/4 AssertionErrors. Major context loss.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0292",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T5: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0293",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code very similar (sim=0.93) but all tests fail with AssertionError — subtle semantic difference.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0294",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T8 ValueError + low similarity (0.38) — prior behavior lost, now hitting inherited validation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0295",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0296",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'combinations_list' modified (sim=0.67). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0297",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 3/10 valid inputs. Guards: [if not isinstance(r, (int, float)): → raise TypeError(\"Radius 'r' must be an int or float.\"); if not isinstance(theta, (int, float)): → raise TypeError(\"Angle 'theta' must be an int or float.\"); if r < 0: → raise ValueError(\"Radius 'r' must be non-negative.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0298",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0299",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 10/10 valid inputs. Guards: [if len(args) != 1: → raise ValueError(\"Each argument tuple must contain exactly one string.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0300",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'FindLengthProcessor' modified (sim=0.84). 5/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0301",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(z, numbers.Complex): → raise TypeError(f\"Input must be a complex number, got {type(z).__name__}\");  → raise TypeError(f\"Cannot convert input to complex number: {e}\"); if math.isnan(z_complex.real) or math.isnan(z_complex.imag): → raise ValueError(\"Cannot compute angle for complex number with NaN component(s)\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0302",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 10/10 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"Input must be a list of integers.\"); if not isinstance(num, int): → raise TypeError(f\"All elements in the list must be integers. Invalid element: {num}\"); if num < 0: → raise ValueError(f\"All integers in the list must be non-negative. Invalid element: {num}\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0303",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 7 tests (rate=0.87). Dominant error: Timeout (7/7).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0304",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (1/1) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0305",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError suggests signature/interface change: TypeError: angle_complex() takes 1 positional argument but 2 were given",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0306",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(\"Input string cannot be converted to a number\"); if not isinstance(string, (int, float)): → raise TypeError(\"Input string must be a numeric value\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0307",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 5 ValueError/TypeError raises (vs 3 in prev). 10/10 tests rejected.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0308",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (2/2) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0309",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0310",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0311",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (4/4) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0312",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (2/10) in Performance Optimization turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0313",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "Code shrank from 329 to 51 lines (ratio=0.16) — partial context recall.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0314",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0315",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 2/2 valid inputs. Guards: [if not isinstance(string, str): → raise TypeError(\"Argument must be a string\"); if len(string) == 0: → raise ValueError(\"String must not be empty\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0316",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0317",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0318",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0319",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0320",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'remove_kth_element' modified (sim=0.59). 9/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0321",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 10/10 valid inputs. Guards: [ → raise TypeError(error_msg);  → raise TypeError(error_msg);  → raise ValueError(error_msg)].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0322",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'MaxProductProcessor' modified (sim=0.75). 5/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0323",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0324",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0325",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0326",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0327",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 2/2 valid inputs. Guards: [if not isinstance(n, (int, float)): → raise TypeError(\"Input must be an integer or a float.\"); if isinstance(n, float) and not n.is_integer(): → raise ValueError(\"Input must be a whole number.\"); if n <= 0: → raise ValueError(\"Input must be a positive integer.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0328",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Syntax invalid code (SyntaxError in 10/10 tests). Code appears truncated or garbled.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0329",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-3"
+    ],
+    "primary_type": "AC-3",
+    "notes": "NameError — style drift fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0330",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-3"
+    ],
+    "primary_type": "CC-3",
+    "notes": "Runtime errors [ZeroDivisionError(10)] suggest integration inconsistency — new and old code data flow assumptions mismatch.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0331",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0332",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'get_median' modified (sim=0.67). 9/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0333",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 10/10 valid inputs. Guards: [ → raise TypeError(\"Input must be serializable to JSON for caching purposes.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0334",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0335",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0336",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'is_undulating' modified (sim=0.71). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0337",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.04). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0338",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0339",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'VolumeCylinderProcessor' modified (sim=0.71). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0340",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(f\"String '{item}' cannot be converted to a number.\");  → raise TypeError(f\"Invalid type '{type(item).__name__}' found in list. Only integers and string representations of numbers are allowed.\"); if not int_items: → raise ValueError(\"List must contain at least one integer or string representation of a number.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0341",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0342",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError suggests signature/interface change: TypeError: AngleComplexProcessor.angle_complex() takes 2 positional arguments but 3 were given",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0343",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T5: AssertionErrors — context loss fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0344",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 3 new guard(s) reject 1/1 valid inputs. Guards: [ → raise ValueError(f\"Invalid string: {value} cannot be converted to a number.\"); if not num.is_integer(): → raise ValueError(f\"String {value} represents a non-integer number.\");  → raise TypeError(f\"Invalid type: {type(value).__name__}. Only integers and strings are allowed.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0345",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0346",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError suggests signature/interface change: TypeError: argument of type 'int' is not iterable",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0347",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1",
+      "CC-2"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s)/class(es): {'clear_cache', 'angle_complex_batch', 'angle_complex'}. 3 NameError/AttributeError in tests. TypeError suggests signature/interface change: TypeError: AngleComplexProcessor.angle_complex() takes 2 positional arguments but 3 were given",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0348",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(f\"String value '{value}' cannot be converted to a numeric type.\");  → raise TypeError(f\"Unsupported value type: {type(value)}.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0349",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 6/10 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"Input must be a list.\"); if not isinstance(t, tuple): → raise TypeError(\"Each element must be a tuple.\"); if not t: → raise ValueError(\"Tuples cannot be empty.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0350",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0351",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (5/10) in Performance Optimization turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0352",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0353",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0354",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (7/7) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0355",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'IsOctagonalProcessor' modified (sim=0.80). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0356",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0357",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError suggests signature/interface change: TypeError: AngleComplexProcessor.angle_complex() takes 2 positional arguments but 3 were given",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0358",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 7/7 valid inputs. Guards: [if not isinstance(lists, list): → raise TypeError(\"Input must be a list of lists.\"); if not isinstance(lst, list): → raise TypeError(\"Input must be a list of lists.\"); if not lst: → raise ValueError(\"Input list cannot be empty.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0359",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 2 new guard(s) reject 10/10 valid inputs. Guards: [ → raise ValueError(f\"String value '{a}' cannot be converted to a number.\");  → raise ValueError(f\"String value '{b}' cannot be converted to a number.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0360",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 3 tests (rate=0.57). Dominant error: AssertionError (3/3).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0361",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0362",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (4/10) in Functional Extension turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0363",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'stats' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0364",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "AttributeError: 'is_integer' exists in prev_code but not properly implemented in current.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0365",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 4 new guard(s) reject 3/10 valid inputs. Guards: [if r_converted < 0: → raise ValueError(f\"r (magnitude) must be non-negative, got {r_converted}\"); if not isinstance(r_converted, complex) and r_converted < 0: → raise ValueError(f\"r (magnitude) must be non-negative, got {r_converted}\");  → raise TypeError(f\"r must be numeric or string type, got {type(r).__name__}\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0366",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4",
+      "CL-3"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 5 new guard(s) reject 3/3 valid inputs. Guards: [if not isinstance(numbers, list): → raise TypeError(\"numbers must be a list\"); if not isinstance(num, (int, str)): → raise TypeError(\"All elements must be integers or strings representing numbers\"); if len(numbers) == 0: → raise ValueError(\"numbers cannot be empty\")]. Code shrank from 192 to 63 lines (ratio=0.33) — partial context recall.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0367",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0368",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0369",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.34). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0370",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (10/10) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0371",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.27). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0372",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "ValueError (1/10) in Performance Optimization turn — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0373",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "TypeError — interface mismatch fallback.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0374",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.00). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0375",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 5 new guard(s) reject 9/10 valid inputs. Guards: [if not isinstance(lst, list): → raise TypeError(\"The first argument must be a list.\"); if not all(isinstance(x, (int, float)) for x in lst): → raise TypeError(\"All elements in the list must be numbers.\"); if not isinstance(n, int): → raise TypeError(\"The second argument must be an integer.\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0376",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Function 'starts_one_ends' modified (sim=0.76). 10/10 AssertionErrors — semantic collision.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0377",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0378",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "Code very similar (sim=0.91) but all tests fail with AssertionError — subtle semantic difference.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0379",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "ValueError dominates (2/2) — validation rejects valid inputs.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0380",
+    "annotator": "A3",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "Over-guarding: 1 new guard(s) reject 2/2 valid inputs. Guards: [if not isinstance(n, int): → raise TypeError(\"n must be an integer\")].",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0381",
+    "annotator": "A3",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "T6 ValueError + low similarity (0.45) — prior behavior lost, now hitting inherited validation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0382",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "Code output contains chain-of-thought text, not valid Python. Truncated/garbled generation.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0383",
+    "annotator": "A3",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "Removed function(s)/class(es): {'clear_cache', 'string_xor_batch', 'string_xor'}. 10 NameError/AttributeError in tests.",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
+  },
+  {
+    "sample_id": "S0384",
+    "annotator": "A3",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "T1: Implementation fails 10 tests (rate=0.18). Dominant error: AssertionError (10/10).",
+    "timestamp": "2026-03-03T08:43:57.760395+00:00"
   }
 ]
