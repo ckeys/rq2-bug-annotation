@@ -58,6 +58,25 @@ pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 6px; ov
 .loading { text-align: center; padding: 2rem; color: var(--gray); }
 .guideline-link { font-size: 0.85rem; color: var(--primary); text-decoration: underline; }
 #toast { display: none; }
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:100; overflow-y:auto; }
+.modal-overlay.active { display:flex; justify-content:center; padding:2rem 1rem; }
+.modal { background:white; border-radius:12px; max-width:900px; width:100%; padding:2rem; position:relative; max-height:90vh; overflow-y:auto; }
+.modal-close { position:sticky; top:0; float:right; background:var(--danger); color:white; border:none; border-radius:50%; width:32px; height:32px; font-size:1.2rem; cursor:pointer; z-index:1; }
+.guide-section { margin-bottom:1.5rem; }
+.guide-section h3 { color:var(--primary); font-size:1rem; margin-bottom:0.5rem; border-bottom:1px solid #e5e7eb; padding-bottom:0.3rem; }
+.guide-table { width:100%; border-collapse:collapse; font-size:0.85rem; margin:0.5rem 0; }
+.guide-table th { background:#f3f4f6; text-align:left; padding:0.5rem; border:1px solid #e5e7eb; font-weight:600; }
+.guide-table td { padding:0.5rem; border:1px solid #e5e7eb; vertical-align:top; }
+.guide-table tr:hover { background:#f9fafb; }
+.step-list { list-style:none; counter-reset:step; padding-left:0; }
+.step-list li { counter-increment:step; padding:0.6rem 0.8rem; margin:0.3rem 0; background:#f3f4f6; border-radius:6px; font-size:0.9rem; }
+.step-list li::before { content:counter(step); background:var(--primary); color:white; width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; margin-right:0.6rem; }
+.hint-box { background:#eff6ff; border-left:3px solid var(--primary); padding:0.6rem 0.8rem; border-radius:4px; font-size:0.85rem; margin:0.5rem 0; }
+.cls-tag { display:inline-block; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.75rem; font-weight:600; margin-right:0.3rem; }
+.cls-baseline { background:#f3f4f6; color:#374151; }
+.cls-context { background:#dbeafe; color:#1e40af; }
+.cls-conflict { background:#fef3c7; color:#92400e; }
+.cls-accum { background:#fce7f3; color:#9d174d; }
 </style>
 </head>
 <body>
@@ -85,7 +104,127 @@ pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 6px; ov
     </div>
     <button class="btn btn-primary" onclick="doLogin()" style="width:100%;">Start Annotating</button>
     <p id="login-task-count" style="margin-top: 1rem; font-size: 0.85rem; color: var(--gray);"></p>
-    <p style="margin-top: 0.5rem;"><a href="data/annotation_guideline.md" target="_blank" class="guideline-link">View Annotation Guideline</a></p>
+    <div style="margin-top:0.8rem; display:flex; gap:0.5rem; justify-content:center;">
+        <button class="btn btn-outline" onclick="document.getElementById('guide-modal').classList.add('active')" style="font-size:0.9rem;">Annotation Guide</button>
+        <a href="data/annotation_guideline.md" target="_blank" class="btn btn-outline" style="font-size:0.9rem;">Raw Guideline</a>
+    </div>
+</div>
+</div>
+
+<!-- ANNOTATION GUIDE MODAL -->
+<div id="guide-modal" class="modal-overlay" onclick="if(event.target===this)this.classList.remove('active')">
+<div class="modal">
+<button class="modal-close" onclick="document.getElementById('guide-modal').classList.remove('active')">&times;</button>
+
+<h2 style="color:var(--primary); margin-bottom:1rem;">Annotation Guide</h2>
+
+<div class="guide-section">
+<h3>Task Overview</h3>
+<p style="font-size:0.9rem;">You are annotating <strong>failed turn instances</strong> from multi-turn LLM programming conversations. In each instance, an LLM was asked to modify code, and the resulting code <strong>failed</strong> some or all regression tests. Your goal: identify <strong>why</strong> the code failed.</p>
+</div>
+
+<div class="guide-section">
+<h3>What You Will See</h3>
+<ol style="font-size:0.9rem; padding-left:1.2rem;">
+<li><strong>Original Task</strong> &mdash; the seed task description</li>
+<li><strong>Turn Number &amp; Change Type</strong> &mdash; which turn and what kind of change was requested</li>
+<li><strong>Current Turn Prompt</strong> &mdash; the exact instruction given to the LLM</li>
+<li><strong>Previous Code</strong> &mdash; code from the prior turn (which passed tests). Empty for T1.</li>
+<li><strong>Current Code</strong> &mdash; code the LLM produced this turn (which failed)</li>
+<li><strong>Failed Tests</strong> &mdash; specific test cases that failed, with error messages</li>
+<li><strong>Regression Rate</strong> &mdash; fraction of original tests that still pass (0.0 = total failure)</li>
+</ol>
+</div>
+
+<div class="guide-section">
+<h3>Bug Taxonomy</h3>
+
+<h4 style="margin:0.8rem 0 0.3rem;"><span class="cls-tag cls-baseline">Category 0</span> Baseline Failure (T1 only)</h4>
+<table class="guide-table">
+<tr><th style="width:60px;">ID</th><th style="width:150px;">Name</th><th>Definition</th><th>Example</th></tr>
+<tr><td><strong>BF</strong></td><td>Baseline Failure</td><td>LLM fails to correctly implement the original task at Turn 1. Single-turn error, not multi-turn regression.</td><td>T1 implements <code>is_palindrome</code> but returns wrong result for edge case <code>""</code>.</td></tr>
+</table>
+<div class="hint-box">BF applies <strong>only</strong> to Turn 1. If a sample is T1 and fails, label it BF. Do not use other labels for T1.</div>
+
+<h4 style="margin:0.8rem 0 0.3rem;"><span class="cls-tag cls-context">Class I</span> Context-Loss &mdash; LLM loses prior context</h4>
+<table class="guide-table">
+<tr><th style="width:60px;">ID</th><th style="width:150px;">Name</th><th>Definition</th><th>Example</th></tr>
+<tr><td><strong>CL-1</strong></td><td>Context Loss</td><td>Forgets or overwrites a constraint/behavior from a prior turn. Logic disappears or is replaced.</td><td>T2 added <code>TypeError</code>; T4's code no longer raises it.</td></tr>
+<tr><td><strong>CL-3</strong></td><td>Partial Context Recall</td><td>Functions/methods exist but have incomplete internal logic.</td><td>T6 refactors to class; <code>clear_cache()</code> method body is empty.</td></tr>
+</table>
+
+<h4 style="margin:0.8rem 0 0.3rem;"><span class="cls-tag cls-conflict">Class II</span> Cross-Turn Conflict &mdash; new and old code conflict</h4>
+<table class="guide-table">
+<tr><th style="width:60px;">ID</th><th style="width:150px;">Name</th><th>Definition</th><th>Example</th></tr>
+<tr><td><strong>CC-1</strong></td><td>Semantic Collision</td><td>New logic contradicts or is incompatible with prior logic, producing wrong results or runtime errors.</td><td>T8 replaces sorting algorithm but returns results in wrong order.</td></tr>
+<tr><td><strong>CC-2</strong></td><td>Interface Mismatch</td><td>Changes function/method signature, return type, or calling convention.</td><td>T6 changes <code>func(a,b)</code> to <code>func(params_dict)</code>.</td></tr>
+<tr><td><strong>CC-3</strong></td><td>Integration Inconsistency</td><td>New and old code individually correct but fail to integrate (data flow, state, assumptions).</td><td>T7 adds <code>self.stats</code> but cache path bypasses it.</td></tr>
+<tr><td><strong>CC-4</strong></td><td>Over-Guarding</td><td>Defensive code rejects inputs the original spec treats as valid.</td><td>T2 adds <code>if n&lt;=0: raise ValueError</code> but tests include <code>func(0)==[]</code>.</td></tr>
+</table>
+
+<h4 style="margin:0.8rem 0 0.3rem;"><span class="cls-tag cls-accum">Class III</span> Accumulation &mdash; progressive degradation</h4>
+<table class="guide-table">
+<tr><th style="width:60px;">ID</th><th style="width:150px;">Name</th><th>Definition</th><th>Example</th></tr>
+<tr><td><strong>AC-1</strong></td><td>Regression via Omission</td><td>Silently drops an entire function/method/block not mentioned in prompt.</td><td>T8 rewrites algorithm but omits <code>_batch</code> function entirely.</td></tr>
+<tr><td><strong>AC-2</strong></td><td>Complexity Collapse</td><td>Accumulated code exceeds LLM capacity: truncated, empty, or syntax-broken output.</td><td>Code cut off mid-function; missing closing brackets.</td></tr>
+<tr><td><strong>AC-3</strong></td><td>Style Drift</td><td>Inconsistent patterns across turns cause subtle bugs.</td><td>Variable renamed from <code>result</code> to <code>res</code> causes <code>NameError</code>.</td></tr>
+</table>
+</div>
+
+<div class="guide-section">
+<h3>Distinguishing Rules</h3>
+<table class="guide-table">
+<tr><th>Confusion Pair</th><th>Rule</th></tr>
+<tr><td><strong>CL-1 vs CL-3</strong></td><td>CL-1 = constraint/behavior is <strong>gone</strong>. CL-3 = code <strong>exists</strong> but is <strong>incomplete</strong>.</td></tr>
+<tr><td><strong>AC-1 vs CL-3</strong></td><td>AC-1 = <strong>entire function/block</strong> removed. CL-3 = function exists but internal logic has gaps.</td></tr>
+<tr><td><strong>AC-1 vs CL-1</strong></td><td>AC-1 = structural removal (whole function gone). CL-1 = behavioral removal (constraint within function lost).</td></tr>
+<tr><td><strong>CC-1 vs CC-4</strong></td><td>CC-1 = wrong results for valid inputs. CC-4 = <strong>rejects</strong> valid inputs by raising exception.</td></tr>
+<tr><td><strong>CC-3 vs CC-1</strong></td><td>CC-3 = both sides individually correct, fail to integrate. CC-1 = new logic directly contradicts old.</td></tr>
+<tr><td><strong>CL-1 vs CC-4</strong></td><td>CL-1 = prior constraint <strong>lost</strong>. CC-4 = <strong>new</strong> guard added that is too strict.</td></tr>
+</table>
+</div>
+
+<div class="guide-section">
+<h3>Annotation Steps</h3>
+<ul class="step-list">
+<li><strong>Check if Turn 1</strong> &mdash; If T1, label as <strong>BF</strong> and submit. Skip remaining steps.</li>
+<li><strong>Compare Previous vs Current Code</strong> &mdash; What changed between them?</li>
+<li><strong>Examine Failed Tests</strong> &mdash; Look at error types:
+    <div class="hint-box" style="margin-top:0.3rem;">
+    <code>ValueError/TypeError</code> from new validation &rarr; likely <strong>CC-4</strong><br>
+    <code>AssertionError</code> (wrong value) &rarr; likely <strong>CL-1</strong> or <strong>CC-1</strong><br>
+    <code>NameError/AttributeError</code> &rarr; likely <strong>AC-1</strong>, <strong>CL-3</strong>, or <strong>AC-3</strong><br>
+    <code>SyntaxError</code> / truncated &rarr; likely <strong>AC-2</strong><br>
+    <code>Timeout</code> &rarr; diagnose root cause (CC-1, AC-1, or CL-1)
+    </div>
+</li>
+<li><strong>Diagnose Root Cause</strong> &mdash; Why did previously-passing tests fail?
+    <div class="hint-box" style="margin-top:0.3rem;">
+    Forgot something from before? &rarr; <strong>Class I</strong><br>
+    New code conflicts with old? &rarr; <strong>Class II</strong><br>
+    Degraded from growing complexity? &rarr; <strong>Class III</strong>
+    </div>
+</li>
+<li><strong>Select Bug Type(s)</strong> &mdash; Select <strong>all applicable</strong> types (multi-label), then pick <strong>one primary type</strong>.</li>
+</ul>
+</div>
+
+<div class="guide-section">
+<h3>Rules</h3>
+<ol style="font-size:0.88rem; padding-left:1.2rem;">
+<li><strong>Multi-label</strong>: A single failure can have multiple bug types. Select all that apply.</li>
+<li><strong>Primary type</strong>: Always select exactly one &mdash; the root cause.</li>
+<li><strong>When unsure</strong>: Select both candidates; choose the more specific one as primary.</li>
+<li><strong>AC-2</strong>: Only for syntactically broken/truncated/empty code. Logic errors are NOT AC-2.</li>
+<li><strong>CC-4</strong>: New guard raises exception for inputs the tests treat as valid (test expects return value, gets exception).</li>
+<li><strong>BF</strong>: Only for T1 samples. Never use BF for T2&ndash;T8.</li>
+</ol>
+</div>
+
+<div style="text-align:center; margin-top:1rem;">
+<button class="btn btn-primary" onclick="document.getElementById('guide-modal').classList.remove('active')">Got it, start annotating!</button>
+</div>
+
 </div>
 </div>
 
