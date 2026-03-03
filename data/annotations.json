@@ -3839,5 +3839,3846 @@
     "primary_type": "BF",
     "notes": "T1 Baseline Failure: LLM implementation has edge-case bugs (pass rate=0.18). Dominant error: AssertionError (10/10 tests).",
     "timestamp": "2026-03-03T04:22:18.015986+00:00"
+  },
+  {
+    "sample_id": "S0001",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0002",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'even_bit_set_number' changed (sim=0.52). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0003",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.32). Edge cases not handled. Main error: TypeError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0004",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.95). Edge cases not handled. Main error: NameError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0005",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.64). Edge cases not handled. Main error: IndexError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0006",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError/TypeError guards reject 9/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0007",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [# Check if arr is not empty | if len(arr) == 0: | raise ValueError(\"arr must].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0008",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] LLM output is reasoning text, not executable code. No function/class definitions found.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0009",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 1/1 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0010",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: LLM output is empty or has syntax errors — baseline implementation failure.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0011",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0012",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Near-identical code but optimization subtly changed edge-case behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0013",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0014",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.89). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0015",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 1/1 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0016",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0017",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Parameter 'dict' shadows builtin type, breaking isinstance() calls.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0018",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'text_lowercase_underscore' changed (sim=0.70). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0019",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [converted_list.append(element) |  | But this].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0020",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.78). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0021",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0022",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CC-4/CL-1/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0023",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0024",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: LLM output is empty or has syntax errors — baseline implementation failure.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0025",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0026",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.30). Edge cases not handled. Main error: TypeError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0027",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'similar_elements' modified during optimization (sim=0.74). New logic conflicts with expected behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0028",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.88) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0029",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CL-1/CC-4)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0030",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CC-4/CL-1/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0031",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.81). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0032",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0033",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0034",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'add_tuple' changed (sim=0.70). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0035",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.82). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0036",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.77). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0037",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.85). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0038",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0039",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1",
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 2/10 valid test inputs that expect normal return values. Timeout — new code introduces performance regression.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0040",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0041",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0042",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.69). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0043",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'find_adverb_position' changed (sim=0.79). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0044",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0045",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0046",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 3/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0047",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [Perhaps the correct interpretation is that the function should accept both regular strings and numer].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0048",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [except Exception: | results.append(None) | return results].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0049",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-4/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0050",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.61). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0051",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'combinations_list' changed (sim=0.61). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0052",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'casefold'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0053",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'string_to_list' changed (sim=0.51). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0054",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0055",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.30). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0056",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'surface_Area' changed (sim=0.59). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0057",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [s = m + 1 = 2 | n = 1, power_of_2 = 2 | current = 1 * 2 = 2 == s, so return True.].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0058",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: LLM output is empty or has syntax errors — baseline implementation failure.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0059",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[majority (CL-1/CC-1/CC-1)] Restructuring caused semantic conflict in 'clear_cache' (sim=0.57).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0060",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0061",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0062",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.53) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0063",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0064",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'drop_empty' changed (sim=0.71). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0065",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0066",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [self._cache = {} | self.stats = { | 'calls].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0067",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[majority (CC-1/CL-1/CC-1)] Minor changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0068",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0069",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CC-4/CL-1/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0070",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.68). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0071",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 1/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0072",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 1/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0073",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CC-4/CL-1/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0074",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0075",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0076",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0077",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 2/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0078",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.88). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0079",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [Given the time, I'll proceed with the initial code where the function attempts to convert the string].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0080",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.70). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0081",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'mean_absolute_deviation' changed (sim=0.76). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0082",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "[unanimous] Entire functions removed: {'__init__'}. Tests reference missing symbols.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0083",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0084",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.88). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0085",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [But what about the case where the argument is a string with parts that are valid letters or numbers,].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0086",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Near-identical code but optimization subtly changed edge-case behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0087",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.78) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0088",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'count_Substrings' changed (sim=0.75). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0089",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-4/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0090",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0091",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Near-identical code but optimization subtly changed edge-case behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0092",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [for tup1, tup2 in zip(t1, t2): | if len(tup1) != len(tup2): | raise ValueError(\"Corresponding].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0093",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function '__init__' heavily rewritten (sim=0.20). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0094",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0095",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0096",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-4/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0097",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.75). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0098",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0099",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0100",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Near-identical code but optimization subtly changed edge-case behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0101",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [ | def string_to_md5_batch(self, args_list): | # ... (rest of the method remains the same)].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0102",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.82). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0103",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [But the original test case expects a tuple of integers, which would cause the assert to fail. |  | S].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0104",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0105",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.94). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0106",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0107",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.82). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0108",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0109",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-4/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0110",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function '__init__' heavily rewritten (sim=0.29). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0111",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.82). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0112",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 8/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0113",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0114",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.71). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0115",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 2/6 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0116",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0117",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0118",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0119",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0120",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0121",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-4/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0122",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] LLM output is reasoning text, not executable code. No function/class definitions found.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0123",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0124",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0125",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function '__init__' heavily rewritten (sim=0.18). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0126",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function '__init__' heavily rewritten (sim=0.27). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0127",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0128",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 7/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0129",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.27). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0130",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0131",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-1/CL-1)] Function 'parabola_directrix' heavily rewritten (sim=0.33). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0132",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.87). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0133",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'jacobsthal_num' changed (sim=0.66). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0134",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 6/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0135",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.90). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0136",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (TypeError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0137",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0138",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError/TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0139",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0140",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'snake_to_camel' changed (sim=0.61). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0141",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0142",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function '__init__' heavily rewritten (sim=0.30). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0143",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0144",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0145",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.96). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0146",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 6/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0147",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0148",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0149",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[majority (CC-1/CL-1/CC-1)] Restructuring caused semantic conflict in 'clear_cache' (sim=0.67).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0150",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-1/CL-1)] Very similar code but some behavioral constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0151",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0152",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0153",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0154",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] LLM output is reasoning text, not executable code. No function/class definitions found.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0155",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 8/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0156",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [But the user wants the complete code. So putting it all together. |  | But also, need to make sure t].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0157",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.95). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0158",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (Timeout).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0159",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function '__init__' heavily rewritten (sim=0.18). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0160",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-4/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0161",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0162",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 1/1 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0163",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0164",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0165",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] LLM output is reasoning text, not executable code. No function/class definitions found.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0166",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0167",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-4/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0168",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0169",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[majority (CC-1/CC-1/CL-1)] Function '__init__' changed (sim=0.35). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0170",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [histogram('a b c') == {'a': 1, 'b': 1, 'c': 1} | histogram('a b b a') == {'a': 2, 'b': 2} | histogra].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0171",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 1/1 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0172",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0173",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'logger'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0174",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.82) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0175",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0176",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0177",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function '__init__' changed (sim=0.60). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0178",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.11). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0179",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[majority (CC-1/CC-1/CL-1)] Function '__init__' changed (sim=0.37). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0180",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0181",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0182",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'is_lower' modified during optimization (sim=0.69). New logic conflicts with expected behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0183",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0184",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0185",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 3/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0186",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'heap_sort' changed (sim=0.64). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0187",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function '__init__' heavily rewritten (sim=0.18). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0188",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.85). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0189",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0190",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 9/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0191",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 2/2 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0192",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0193",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0194",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function '__init__' changed (sim=0.47). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0195",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0196",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0197",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0198",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [Yes, this would log the TypeError as a WARNING. But according to the original code, the type check w].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0199",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0200",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0201",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Major rewrite (sim=0.11) with failures — context lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0202",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.85). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0203",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.76) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0204",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [But this would change the function's behavior for non-numeric strings. |  | Alternatively, perhaps].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0205",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'dog_age' modified during optimization (sim=0.75). New logic conflicts with expected behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0206",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 5/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0207",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0208",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 1/1 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0209",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Major rewrite (sim=0.01) with failures — context lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0210",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0211",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'similar_elements' changed (sim=0.53). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0212",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.90) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0213",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0214",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: LLM output is empty or has syntax errors — baseline implementation failure.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0215",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'change_date_format' changed (sim=0.79). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0216",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [So, the function should: |  | - If `K` is].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0217",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.91) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0218",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[majority (CC-1/CC-1/CL-1)] Restructuring caused semantic conflict in 'clear_cache' (sim=0.60).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0219",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.48). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0220",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0221",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0222",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: LLM output is empty or has syntax errors — baseline implementation failure.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0223",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] LLM output is reasoning text, not executable code. No function/class definitions found.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0224",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [What about if a row is not a list? Like grid = [ [0,1], (1,0) ] → raises TypeError for the second ro].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0225",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'is_Sub_Array' changed (sim=0.75). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0226",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CL-1/CC-4)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0227",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0228",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CL-1/CC-4)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0229",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.89). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0230",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0231",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [try: | converted = float(num) | except ValueError:].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0232",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [continue | else: | result].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0233",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 7/7 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0234",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0235",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 5/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0236",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-4/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0237",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.89). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0238",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0239",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Timeout — new code introduces performance regression.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0240",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'pancake_sort' changed (sim=0.58). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0241",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 5/5 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0242",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0243",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [result = self.smallest_change(args[0]) | results.append(result) | except].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0244",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'snake_to_camel' changed (sim=0.70). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0245",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0246",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CC-4/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0247",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (Other).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0248",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Near-identical code but optimization subtly changed edge-case behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0249",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0250",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0251",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.86). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0252",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0253",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.91). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0254",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0255",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0256",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0257",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0258",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Parameter 'dict' shadows builtin type, breaking isinstance() calls.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0259",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'even_bit_set_number' changed (sim=0.73). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0260",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Parameter 'dict' shadows builtin type, breaking isinstance() calls.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0261",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.89). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0262",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] LLM output is reasoning text, not executable code. No function/class definitions found.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0263",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'sum_non_cached'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0264",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 4/7 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0265",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0266",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0267",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0268",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function '__init__' changed (sim=0.60). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0269",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0270",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.83). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0271",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0272",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0273",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 7/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0274",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function '__init__' changed (sim=0.57). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0275",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0276",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CL-1/CC-4)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0277",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 3/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0278",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Parameter 'dict' shadows builtin type, breaking isinstance() calls.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0279",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [results.append(None) |  | return results].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0280",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0281",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0282",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0283",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.25). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0284",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0285",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0286",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0287",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0288",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0289",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'next_smallest_palindrome' changed (sim=0.70). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0290",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [Now, what about value errors? The problem says that invalid values (e.g., out of range) should raise].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0291",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Substantial code rewrite (overall sim=0.01). Prior behavior lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0292",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.87). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0293",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Minor changes introduced semantic conflict with prior behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0294",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0295",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] LLM output is reasoning text, not executable code. No function/class definitions found.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0296",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'combinations_list' changed (sim=0.67). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0297",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 3/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0298",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0299",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0300",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'find_length' modified during optimization (sim=0.76). New logic conflicts with expected behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0301",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 7/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0302",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError/TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0303",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.87). Edge cases not handled. Main error: Timeout.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0304",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0305",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0306",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0307",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError/TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0308",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0309",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "[unanimous] Entire functions removed: {'count_consonants'}. Tests reference missing symbols.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0310",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] LLM output is reasoning text, not executable code. No function/class definitions found.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0311",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CL-1/CC-4)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0312",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.88). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0313",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0314",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0315",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 2/2 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0316",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0317",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0318",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [dp[0] =1 |  | i=1 (odd): (1+1)(1+5)/4 =].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0319",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CC-1/CL-1/CL-1)] Very similar code but some behavioral constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0320",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 1/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0321",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0322",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function '__init__' heavily rewritten (sim=0.17). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0323",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [ | def get_stats(self): | return self.stats.copy()].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0324",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [But given the user's instruction, I have to proceed with the code as per the requirements. So, the c].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0325",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [elif n == 3: | return 0 | a, b].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0326",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0327",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 2/2 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0328",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [results.append(None) | print(f\"Error processing argument {arg}: {e}\") | return results].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0329",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.82) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0330",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.89) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0331",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0332",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'get_median' changed (sim=0.67). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0333",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0334",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0335",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0336",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'is_undulating' changed (sim=0.71). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0337",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.04). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0338",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0339",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function '__init__' heavily rewritten (sim=0.20). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0340",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0341",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CC-4/CL-1/CL-1)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0342",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0343",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Assertion failures on regression tests (sim=0.84). New changes conflict with expected output.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0344",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 1/1 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0345",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0346",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0347",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-2"
+    ],
+    "primary_type": "CC-2",
+    "notes": "[unanimous] Function 'clear_cache' signature changed from () to (self). Tests call with old interface.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0348",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0349",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 6/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0350",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0351",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CC-4/CL-1)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0352",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Parameter 'dict' shadows builtin type, breaking isinstance() calls.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0353",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [self.logger = logging.getLogger('is_multiply_prime') | self.stats = {'calls': 0, 'cache_hits': 0, 'e].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0354",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0355",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[majority (CC-1/CC-1/CL-1)] Function '__init__' changed (sim=0.37). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0356",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [So, the expected results are: |  | [[1,4,5], [], None].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0357",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0358",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 7/7 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0359",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0360",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.57). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0361",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0362",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0363",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-1"
+    ],
+    "primary_type": "AC-1",
+    "notes": "[unanimous] Entire functions removed: {'get_stats', 'clear_cache', '__init__', 'merge_sorted_list_batch'}. Tests reference missing symbols.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0364",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-3"
+    ],
+    "primary_type": "CL-3",
+    "notes": "[unanimous] Attributes {'is_integer'} from prev_code are missing/incomplete in current code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0365",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[unanimous] Function 'polar_rect' heavily rewritten (sim=0.27). Prior behavior lost — regression test assertions fail.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0366",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CL-1/CC-4/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0367",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Parameter 'dict' shadows builtin type, breaking isinstance() calls.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0368",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0369",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.34). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0370",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0371",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.27). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0372",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Near-identical code but optimization subtly changed edge-case behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0373",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] TypeError from incompatible type handling in new code.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0374",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Complete failure to implement the task. All tests fail (AssertionError).",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0375",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New ValueError guards reject 9/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0376",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Function 'starts_one_ends' changed (sim=0.76). New logic produces incorrect results.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0377",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] New TypeError guards reject 10/10 valid test inputs that expect normal return values.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0378",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Near-identical code but optimization subtly changed edge-case behavior.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0379",
+    "annotator": "A2",
+    "bug_types": [
+      "CL-1"
+    ],
+    "primary_type": "CL-1",
+    "notes": "[majority (CL-1/CL-1/CC-4)] ValueError suggests prior constraint was lost.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0380",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[unanimous] ValueError from new validation rejecting valid inputs.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0381",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-4"
+    ],
+    "primary_type": "CC-4",
+    "notes": "[majority (CC-4/CL-1/CC-4)] ValueError likely from overly restrictive new validation.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0382",
+    "annotator": "A2",
+    "bug_types": [
+      "AC-2"
+    ],
+    "primary_type": "AC-2",
+    "notes": "[unanimous] Syntax errors in output — code is truncated or malformed. Tail: [ | def get_stats(self): | return self.stats.copy()].",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0383",
+    "annotator": "A2",
+    "bug_types": [
+      "CC-1"
+    ],
+    "primary_type": "CC-1",
+    "notes": "[unanimous] Changes (sim=0.89) caused test failures — semantic conflict.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
+  },
+  {
+    "sample_id": "S0384",
+    "annotator": "A2",
+    "bug_types": [
+      "BF"
+    ],
+    "primary_type": "BF",
+    "notes": "[unanimous] T1: Partial implementation failure (rate=0.18). Edge cases not handled. Main error: AssertionError.",
+    "timestamp": "2026-03-03T07:23:21.734847+00:00"
   }
 ]
