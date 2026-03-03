@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annotation Guide — RQ2 Bug Classification</title>
+<style>
+:root { --primary: #2563eb; --danger: #dc2626; --success: #16a34a; --gray: #6b7280; --bg: #f9fafb; --accent-blue: #dbeafe; --accent-amber: #fef3c7; --accent-pink: #fce7f3; --accent-slate: #f1f5f9; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: #1f2937; line-height: 1.7; }
+
+.hero { background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%); color: white; padding: 3rem 1.5rem; text-align: center; }
+.hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+.hero p { font-size: 1.05rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+.hero .version { display: inline-block; background: rgba(255,255,255,0.15); padding: 0.2rem 0.8rem; border-radius: 999px; font-size: 0.8rem; margin-top: 0.8rem; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+.toc { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 1.5rem 2rem; margin-bottom: 2rem; }
+.toc h2 { font-size: 1rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+.toc ol { padding-left: 1.5rem; }
+.toc li { margin: 0.3rem 0; }
+.toc a { color: var(--primary); text-decoration: none; font-size: 0.95rem; }
+.toc a:hover { text-decoration: underline; }
+
+section { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 2rem; margin-bottom: 1.5rem; }
+section h2 { font-size: 1.3rem; font-weight: 700; color: #111827; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary); }
+section h3 { font-size: 1.05rem; font-weight: 600; color: #374151; margin: 1.2rem 0 0.6rem; }
+section p, section li { font-size: 0.95rem; }
+section ol, section ul { padding-left: 1.4rem; margin: 0.5rem 0; }
+section li { margin: 0.3rem 0; }
+
+.cls-header { display: flex; align-items: center; gap: 0.6rem; margin: 1.5rem 0 0.6rem; padding: 0.5rem 0; }
+.cls-badge { display: inline-block; padding: 0.25rem 0.7rem; border-radius: 6px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; }
+.cls-badge-0 { background: #f1f5f9; color: #475569; }
+.cls-badge-1 { background: #dbeafe; color: #1e40af; }
+.cls-badge-2 { background: #fef3c7; color: #92400e; }
+.cls-badge-3 { background: #fce7f3; color: #9d174d; }
+.cls-title { font-size: 1.1rem; font-weight: 700; color: #111827; }
+.cls-subtitle { font-size: 0.88rem; color: var(--gray); font-weight: 400; }
+
+table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.88rem; }
+th { background: #f8fafc; text-align: left; padding: 0.6rem 0.8rem; border: 1px solid #e2e8f0; font-weight: 600; color: #374151; }
+td { padding: 0.6rem 0.8rem; border: 1px solid #e2e8f0; vertical-align: top; }
+tr:hover td { background: #f8fafc; }
+td code { background: #f1f5f9; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.82rem; color: #0f172a; }
+.id-cell { font-weight: 700; color: var(--primary); white-space: nowrap; width: 55px; }
+.name-cell { font-weight: 600; white-space: nowrap; width: 160px; }
+
+.callout { border-radius: 8px; padding: 0.8rem 1rem; margin: 0.8rem 0; font-size: 0.9rem; }
+.callout-info { background: #eff6ff; border-left: 4px solid var(--primary); }
+.callout-warn { background: #fffbeb; border-left: 4px solid #f59e0b; }
+.callout-tip { background: #f0fdf4; border-left: 4px solid var(--success); }
+.callout strong { font-weight: 600; }
+
+.steps { list-style: none; counter-reset: step; padding-left: 0; }
+.steps > li { counter-increment: step; position: relative; padding: 1rem 1rem 1rem 3.5rem; margin: 0.6rem 0; background: #f8fafc; border-radius: 10px; border: 1px solid #e2e8f0; }
+.steps > li::before { content: counter(step); position: absolute; left: 1rem; top: 1rem; background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.82rem; font-weight: 700; }
+.steps li h4 { font-size: 0.98rem; font-weight: 600; margin-bottom: 0.3rem; color: #111827; }
+.steps li p, .steps li ul { font-size: 0.9rem; color: #4b5563; }
+
+.error-hint { display: grid; grid-template-columns: auto 1fr auto; gap: 0.3rem 0.8rem; align-items: center; margin: 0.5rem 0; font-size: 0.88rem; }
+.error-hint .err-code { font-family: 'SF Mono', 'Fira Code', monospace; background: #fef2f2; color: var(--danger); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.82rem; font-weight: 500; }
+.error-hint .err-arrow { color: var(--gray); }
+.error-hint .err-label { font-weight: 600; color: #1e40af; }
+
+.rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.8rem 0; }
+@media (max-width: 700px) { .rules-grid { grid-template-columns: 1fr; } }
+.rule-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.8rem 1rem; }
+.rule-card .rule-num { font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem; }
+.rule-card p { font-size: 0.88rem; }
+
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500; margin-top: 1rem; }
+.back-link:hover { text-decoration: underline; }
+
+.pilot-box { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border: 1px solid #bbf7d0; border-radius: 10px; padding: 1.2rem 1.5rem; margin-top: 1rem; }
+.pilot-box h3 { color: #166534; margin-bottom: 0.5rem; }
+.pilot-box li { font-size: 0.9rem; color: #166534; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Bug Annotation Guideline</h1>
+    <p>A complete guide to classifying bugs in multi-turn LLM programming conversations</p>
+    <span class="version">v2 &mdash; 10 Bug Types &middot; 4 Classes</span>
+</div>
+
+<div class="wrap">
+
+<nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+        <li><a href="#overview">Task Overview</a></li>
+        <li><a href="#context">What You Will See</a></li>
+        <li><a href="#taxonomy">Bug Taxonomy</a></li>
+        <li><a href="#distinguish">Distinguishing Rules</a></li>
+        <li><a href="#steps">Annotation Steps</a></li>
+        <li><a href="#rules">Annotation Rules</a></li>
+        <li><a href="#pilot">Pilot Round</a></li>
+    </ol>
+</nav>
+
+<!-- OVERVIEW -->
+<section id="overview">
+    <h2>1. Task Overview</h2>
+    <p>You are annotating <strong>failed turn instances</strong> from multi-turn LLM programming conversations. In each instance, an LLM was asked to modify code according to a requirement, and the resulting code <strong>failed</strong> some or all regression tests (tests from prior turns that previously passed).</p>
+    <div class="callout callout-info">
+        <strong>Your goal:</strong> identify <strong>why</strong> the code failed by classifying the bug type(s).
+    </div>
+</section>
+
+<!-- WHAT YOU WILL SEE -->
+<section id="context">
+    <h2>2. What You Will See</h2>
+    <p>For each sample, you will see:</p>
+    <ol>
+        <li><strong>Original Task</strong> &mdash; the seed task description (e.g., "implement function <code>has_close_elements</code>")</li>
+        <li><strong>Turn Number &amp; Change Type</strong> &mdash; which turn this failure occurred at and what kind of change was requested</li>
+        <li><strong>Current Turn Prompt</strong> &mdash; the exact instruction given to the LLM</li>
+        <li><strong>Previous Code</strong> &mdash; the code from the prior turn (which passed tests). For T1 samples, this field is empty.</li>
+        <li><strong>Current Code</strong> &mdash; the code the LLM produced this turn (which failed tests)</li>
+        <li><strong>Failed Tests</strong> &mdash; specific test cases that failed, with error messages</li>
+        <li><strong>Regression Rate</strong> &mdash; fraction of original tests that still pass (0.0 = total failure)</li>
+    </ol>
+</section>
+
+<!-- TAXONOMY -->
+<section id="taxonomy">
+    <h2>3. Bug Taxonomy</h2>
+
+    <!-- Category 0 -->
+    <div class="cls-header">
+        <span class="cls-badge cls-badge-0">CATEGORY 0</span>
+        <span class="cls-title">Baseline Failure</span>
+        <span class="cls-subtitle">&mdash; T1 only</span>
+    </div>
+    <table>
+        <thead><tr><th>ID</th><th>Name</th><th>Definition</th><th>Example</th></tr></thead>
+        <tbody>
+        <tr>
+            <td class="id-cell">BF</td>
+            <td class="name-cell">Baseline Failure</td>
+            <td>The LLM fails to correctly implement the original task specification at Turn 1. This is a <strong>single-turn</strong> implementation error, not a multi-turn regression.</td>
+            <td>T1 implements <code>is_palindrome</code> but returns wrong result for edge case <code>""</code>.</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="callout callout-warn">
+        <strong>Important:</strong> BF applies <strong>only</strong> to Turn 1 failures. If a sample is from T1 and the code does not pass the original tests, label it BF. Do <strong>not</strong> use any other label for T1 samples.
+    </div>
+
+    <!-- Class I -->
+    <div class="cls-header">
+        <span class="cls-badge cls-badge-1">CLASS I</span>
+        <span class="cls-title">Context-Loss</span>
+        <span class="cls-subtitle">&mdash; LLM loses prior context</span>
+    </div>
+    <table>
+        <thead><tr><th>ID</th><th>Name</th><th>Definition</th><th>Example</th></tr></thead>
+        <tbody>
+        <tr>
+            <td class="id-cell">CL-1</td>
+            <td class="name-cell">Context Loss</td>
+            <td>The LLM forgets or overwrites a constraint/behavior established in a prior turn. The previously-correct logic either disappears entirely or is replaced by new logic that breaks it.</td>
+            <td>T2 added <code>TypeError</code> for invalid types; T4's code no longer raises <code>TypeError</code>. T3 extends input handling but replaces T2's validation logic entirely.</td>
+        </tr>
+        <tr>
+            <td class="id-cell">CL-3</td>
+            <td class="name-cell">Partial Context Recall</td>
+            <td>The LLM remembers some but not all critical details from prior code. Functions/methods exist but have incomplete internal logic.</td>
+            <td>T6 refactors to class; <code>clear_cache()</code> becomes a method but its body is empty. T4 adds caching but forgets T3's string-to-number conversion.</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="callout callout-tip">
+        <strong>CL-1 sub-labels</strong> (optional, for finer analysis):<br>
+        &bull; <em>Passive forgetting</em>: the constraint simply disappears with no replacement.<br>
+        &bull; <em>Active overwrite</em>: new turn's logic explicitly replaces/contradicts the prior constraint.
+    </div>
+
+    <!-- Class II -->
+    <div class="cls-header">
+        <span class="cls-badge cls-badge-2">CLASS II</span>
+        <span class="cls-title">Cross-Turn Conflict</span>
+        <span class="cls-subtitle">&mdash; new and old code conflict</span>
+    </div>
+    <table>
+        <thead><tr><th>ID</th><th>Name</th><th>Definition</th><th>Example</th></tr></thead>
+        <tbody>
+        <tr>
+            <td class="id-cell">CC-1</td>
+            <td class="name-cell">Semantic Collision</td>
+            <td>New logic contradicts or is incompatible with prior logic, producing incorrect results or runtime errors.</td>
+            <td>T4's caching returns stale results that conflict with T3's type conversion. T8 replaces sorting algorithm but returns results in wrong order.</td>
+        </tr>
+        <tr>
+            <td class="id-cell">CC-2</td>
+            <td class="name-cell">Interface Mismatch</td>
+            <td>New code changes a function/method signature, return type, or calling convention that prior code or tests depend on.</td>
+            <td>T6 changes method signature from <code>func(a, b)</code> to <code>func(params_dict)</code>, breaking test assertions.</td>
+        </tr>
+        <tr>
+            <td class="id-cell">CC-3</td>
+            <td class="name-cell">Integration Inconsistency</td>
+            <td>New code and existing code are individually correct but fail to integrate properly &mdash; their data flow, shared state, or assumptions are inconsistent.</td>
+            <td>T7 adds <code>self.stats</code> tracking but the caching code path bypasses the stats counter. T4 adds caching using unhashable keys, conflicting with T3's list-type inputs.</td>
+        </tr>
+        <tr>
+            <td class="id-cell">CC-4</td>
+            <td class="name-cell">Over-Guarding</td>
+            <td>The LLM adds defensive code (validation, type checks, boundary guards) that <strong>rejects inputs the original specification treats as valid</strong>. The guard is overly restrictive.</td>
+            <td>T2 adds <code>if not s: raise ValueError</code> for empty string, but tests expect <code>func('') == []</code>. T2 adds <code>if n &lt;= 0: raise ValueError</code> but tests include <code>func(0) == []</code>.</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Class III -->
+    <div class="cls-header">
+        <span class="cls-badge cls-badge-3">CLASS III</span>
+        <span class="cls-title">Accumulation</span>
+        <span class="cls-subtitle">&mdash; progressive degradation</span>
+    </div>
+    <table>
+        <thead><tr><th>ID</th><th>Name</th><th>Definition</th><th>Example</th></tr></thead>
+        <tbody>
+        <tr>
+            <td class="id-cell">AC-1</td>
+            <td class="name-cell">Regression via Omission</td>
+            <td>The LLM silently drops an <strong>entire function, method, or substantial code block</strong> that was not mentioned in the current prompt.</td>
+            <td>T8 rewrites algorithm but omits the <code>_batch</code> function entirely. T7 adds logging but output no longer includes <code>clear_cache()</code>.</td>
+        </tr>
+        <tr>
+            <td class="id-cell">AC-2</td>
+            <td class="name-cell">Complexity Collapse</td>
+            <td>The accumulated code exceeds the LLM's generation capacity, producing syntactically invalid, truncated, or empty output.</td>
+            <td>Code is cut off mid-function; missing closing brackets; garbled output; empty response.</td>
+        </tr>
+        <tr>
+            <td class="id-cell">AC-3</td>
+            <td class="name-cell">Style Drift</td>
+            <td>Inconsistent coding patterns across turns lead to subtle bugs (naming, conventions, data structure choices).</td>
+            <td>Variable renamed from <code>result</code> to <code>res</code> between turns causes <code>NameError</code>. Switching between <code>snake_case</code> and <code>camelCase</code> causes attribute lookup failures.</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- DISTINGUISHING RULES -->
+<section id="distinguish">
+    <h2>4. Distinguishing Rules</h2>
+    <p>Use these rules when two categories seem applicable:</p>
+    <table>
+        <thead><tr><th style="width:160px;">Confusion Pair</th><th>How to Distinguish</th></tr></thead>
+        <tbody>
+        <tr>
+            <td><strong>CL-1 vs CL-3</strong></td>
+            <td>CL-1 = a constraint/behavior is <strong>gone</strong> (relevant code is absent or replaced). CL-3 = the code <strong>exists</strong> but is <strong>incomplete</strong> (partial implementation, missing edge cases within an otherwise present function).</td>
+        </tr>
+        <tr>
+            <td><strong>AC-1 vs CL-3</strong></td>
+            <td>AC-1 = an <strong>entire function/method/code block</strong> is silently removed. CL-3 = function exists but internal logic has gaps.</td>
+        </tr>
+        <tr>
+            <td><strong>AC-1 vs CL-1</strong></td>
+            <td>AC-1 = <strong>structural</strong> removal (whole function/block gone). CL-1 = <strong>behavioral</strong> removal (a specific constraint within a function is lost).</td>
+        </tr>
+        <tr>
+            <td><strong>CC-1 vs CC-4</strong></td>
+            <td>CC-1 = new logic produces <strong>wrong results</strong> for valid inputs. CC-4 = new logic <strong>rejects</strong> valid inputs by raising an exception before any computation occurs.</td>
+        </tr>
+        <tr>
+            <td><strong>CC-3 vs CC-1</strong></td>
+            <td>CC-3 = both old and new code are individually correct, but fail to work together (integration issue). CC-1 = new code's logic directly contradicts old code's semantics.</td>
+        </tr>
+        <tr>
+            <td><strong>CL-1 vs CC-4</strong></td>
+            <td>CL-1 = a prior constraint is <strong>lost</strong> (something that was enforced is no longer enforced). CC-4 = a <strong>new</strong> guard is added that is too strict.</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ANNOTATION STEPS -->
+<section id="steps">
+    <h2>5. Annotation Steps</h2>
+    <ol class="steps">
+        <li>
+            <h4>Check if Turn 1</h4>
+            <p>If the sample is from <strong>Turn 1</strong>, check whether the code simply fails to implement the original task correctly. If so, label it <strong>BF (Baseline Failure)</strong> and skip to submission.</p>
+        </li>
+        <li>
+            <h4>Compare Previous Code vs Current Code</h4>
+            <p>Read the <strong>previous code</strong> (which passed) and the <strong>current code</strong> (which failed). Identify what changed.</p>
+        </li>
+        <li>
+            <h4>Examine Failed Tests</h4>
+            <p>Look at the failed test cases and their error messages. What specific behavior broke?</p>
+            <div style="margin-top:0.5rem;">
+                <div class="error-hint">
+                    <span class="err-code">ValueError / TypeError</span>
+                    <span class="err-arrow">&rarr;</span>
+                    <span class="err-label">likely CC-4 (Over-Guarding)</span>
+                </div>
+                <div class="error-hint">
+                    <span class="err-code">AssertionError</span>
+                    <span class="err-arrow">&rarr;</span>
+                    <span class="err-label">likely CL-1 or CC-1</span>
+                </div>
+                <div class="error-hint">
+                    <span class="err-code">NameError / AttributeError</span>
+                    <span class="err-arrow">&rarr;</span>
+                    <span class="err-label">likely AC-1, CL-3, or AC-3</span>
+                </div>
+                <div class="error-hint">
+                    <span class="err-code">SyntaxError / truncated</span>
+                    <span class="err-arrow">&rarr;</span>
+                    <span class="err-label">likely AC-2</span>
+                </div>
+                <div class="error-hint">
+                    <span class="err-code">Timeout / infinite loop</span>
+                    <span class="err-arrow">&rarr;</span>
+                    <span class="err-label">diagnose: CC-1, AC-1, or CL-1</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <h4>Diagnose Root Cause</h4>
+            <p>Ask yourself: <strong>Why did the previously-passing tests fail?</strong></p>
+            <ul>
+                <li>Did the LLM forget or lose something from before? &rarr; <strong>Class I (Context-Loss)</strong></li>
+                <li>Did new code conflict with old code? &rarr; <strong>Class II (Cross-Turn Conflict)</strong></li>
+                <li>Did the code degrade due to growing complexity? &rarr; <strong>Class III (Accumulation)</strong></li>
+            </ul>
+        </li>
+        <li>
+            <h4>Select Bug Type(s)</h4>
+            <p>Select <strong>all applicable</strong> bug types (multi-label). Then select the <strong>primary type</strong> &mdash; the single most important root cause.</p>
+        </li>
+    </ol>
+</section>
+
+<!-- RULES -->
+<section id="rules">
+    <h2>6. Annotation Rules</h2>
+    <div class="rules-grid">
+        <div class="rule-card">
+            <div class="rule-num">Rule 1</div>
+            <p><strong>Multi-label:</strong> A single failure can exhibit multiple bug types. Select all that apply.</p>
+        </div>
+        <div class="rule-card">
+            <div class="rule-num">Rule 2</div>
+            <p><strong>Primary type:</strong> Always select exactly one primary type &mdash; the root cause.</p>
+        </div>
+        <div class="rule-card">
+            <div class="rule-num">Rule 3</div>
+            <p><strong>When unsure:</strong> Select both candidates and choose the more specific one as primary.</p>
+        </div>
+        <div class="rule-card">
+            <div class="rule-num">Rule 4</div>
+            <p><strong>AC-2 (Complexity Collapse):</strong> Only for syntactically broken, truncated, garbled, or empty code. Logic errors are NOT AC-2.</p>
+        </div>
+        <div class="rule-card">
+            <div class="rule-num">Rule 5</div>
+            <p><strong>CC-4 (Over-Guarding):</strong> New guard raises exception for inputs the tests treat as valid. Key: test expects return value, gets exception.</p>
+        </div>
+        <div class="rule-card">
+            <div class="rule-num">Rule 6</div>
+            <p><strong>BF (Baseline Failure):</strong> Only for T1 samples. Never use BF for T2&ndash;T8.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PILOT -->
+<section id="pilot">
+    <h2>7. Pilot Round</h2>
+    <div class="pilot-box">
+        <h3>Calibration Phase</h3>
+        <p>The pilot round contains 20 samples. After annotation:</p>
+        <ul>
+            <li>We will compare all 4 annotators' labels</li>
+            <li>Disagreements will be discussed to calibrate understanding</li>
+            <li>The guideline may be refined based on pilot results</li>
+        </ul>
+    </div>
+</section>
+
+<a href="index.html" class="back-link">&larr; Back to Annotation Tool</a>
+<br><br>
+
+</div>
+</body>
+</html>
